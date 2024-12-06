@@ -1,5 +1,5 @@
 ---
-title: "Findings"
+title: "Analytics"
 ---
 
 Here we can report findings from each of our analyses. 
