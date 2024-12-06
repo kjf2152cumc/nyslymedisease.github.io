@@ -1,7 +1,41 @@
 ---
 title: "Project Report"
 ---
+<br>
 
-# Motivation
+# Background
 
-Here we can more in depth describe why this analysis was appropriate. 
+## Motivation & Related Work
+
+Our project focuses on analyzing the relationship between Lyme disease case prevalence, tick populations, and environmental factors in New York State. Lyme disease is a vector borne disease with long term side effects that contribute to a meaningful amount of morbidity. We are interested in  regional variations in Lyme disease and how environmental factors influence the spread of the disease. Many members of our team came to Columbia to study infectious disease epidemiology and are interested in using skills from P8105 in future research. 
+
+
+## Questions We Wanted to Answer 
+
+We sought to:
+
+1. Characterize the distribution of Lyme disease cases across New York State counties.
+
+2. Explore any correlation between tick population density and Lyme disease incidence.
+
+3. Understand if and how environmental factors, such as temperature and precipitation, predict tick disease rates.
+
+## Questions We Did Answer
+
+
+
+#Data: Source, scraping method, cleaning, etc.
+
+
+#Exploratory analysis: 
+##Visualizations, 
+##summaries, and 
+##exploratory statistical analyses. 
+
+Justify the steps you took, and show any major changes to your ideas.
+
+#Additional analysis: 
+If you undertake formal statistical analyses, describe these in detail
+
+#Discussion: 
+What were your findings? Are they what you expect? What insights into the data can you make?
