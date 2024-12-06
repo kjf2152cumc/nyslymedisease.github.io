@@ -1,5 +1,26 @@
 ---
-title: "Lyme Disease in NYS: A Final Project for P8105"
+title: "Ticked Off: Distributions of Lyme Disease and Associated Risk Factors in New York State"
 ---
+<br>
 
+# What is Lyme Disease? 
+
+Lyme disease is a tick-borne illness caused by the bacterium *Borrelia burgdorferi* that is transmitted to vertebrates through the bite of infected black-legged ticks - commonly known as deer ticks. It is characterized by symptoms such as fever, fatigue, joint pain, and a distinctive bulls eye rash, with potential complications including neurological and cardiac issues if left untreated. In New York (NY), Lyme disease is a significant public health concern, particularly in rural and suburban areas with higher tick populations.
+
+Lyme disease research has focused on [environmental factors](https://pmc.ncbi.nlm.nih.gov/articles/PMC6627148/), [tick habitats](https://pmc.ncbi.nlm.nih.gov/articles/PMC2732460/), and [preventive strategies](https://pmc.ncbi.nlm.nih.gov/articles/PMC3195518/). One [study](https://pmc.ncbi.nlm.nih.gov/articles/PMC6537717/) in NY examined the role of climate change and land use in increasing tick-borne disease risk. Public health efforts overseen by the [NYS Department of Health](https://www.health.ny.gov/diseases/communicable/lyme/) and other partner organizations emphasize awareness campaigns, early diagnosis, and the promotion of protective behaviors to reduce the burden of Lyme disease. Within this website we will explore our interests in Lyme disease by mapping prevalence of cases in NY and assessing whether those cases change as a function of tick prevalence. 
+
+<figure style="text-align: center;">
+  <img src="tick_pic.jpeg" style="width:75%">
+  <figcaption>Lyme disease causing bacteria and a black-legged tick. Photo obtained from <a href="https://www.hopkinsmedicine.org/news/newsroom/news-releases/2020/12/research-story-tip" target="_blank">Johns Hopkins Medicine</a></figcaption>
+</figure>
+
+<br>
+
+# Project Screencast
 embed the video
+
+<br>
+
+# Development
+
+You can view the Github repository hosting this website and associated source coding [here](https://github.com/kjf2152cumc/nyslymedisease.github.io). 
