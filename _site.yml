@@ -5,9 +5,7 @@ navbar:
   right:
     - text: "Project Report"
       href: project_report.html
-    - text: "Analytics"
-      href: analytics.html
-    - text: "Findings"
+    - text: "Results"
       href: findings.html
     - text: "Interactive Dashboard"
       href: dashboard.html
