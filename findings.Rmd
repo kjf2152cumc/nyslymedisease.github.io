@@ -1,6 +1,10 @@
 ---
-title: "Analytics"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
+<<<<<<< HEAD
 Here we can report findings from each of our analyses. 
 
 ```{r}
@@ -36,38 +40,30 @@ tick_lyme_weather <- tick_lyme_weather |>
       name == "St Lawrence" ~ "St. Lawrence",
       TRUE ~ name))
 ```
+=======
 
-```{r}
-#load necessary libraries
-library(broom)
-library(ggplot2)
-library(dplyr)
-library(knitr)
-```
+# Exploratory Findings
 
-### Table of all relevent data 
-```{r}
-# Summarize or find the mean for the data for each of the relevant topics
-summary_table = tick_lyme_weather %>%
-  group_by(name) %>%
-  summarize(
-    total_cases = sum(lyme_rate, na.rm = TRUE),            
-    total_lyme_count = sum(lyme_count, na.rm = TRUE),     
-    total_ticks_collected = sum(total_ticks_collected, na.rm = TRUE),  
-    mean_prevalence = mean(lyme_rate, na.rm = TRUE),    
-    mean_b_burgdorferi = mean(b_burgdorferi_percent, na.rm = TRUE), 
-    n_observations = n()) %>%
-  mutate(
-    prevalence_percent = mean_prevalence * 100,          
-    mean_b_burgdorferi_percent = mean_b_burgdorferi * 100)
+<div style="text-align: center;">
+  <a href="table.1.html">
+    Click to view Table 1. Summary statistics including number of cases, percent of ticks with bacteria that causes Lyme disease, and average temperature over the course of three years.
+  </a>
+</div>
 
-# Create the table
-summary_table %>%
-  select(name, total_cases, total_lyme_count, total_ticks_collected, prevalence_percent, mean_b_burgdorferi_percent, n_observations) %>%
-  knitr::kable(digits = 2, caption = "Summary of Variables by County")
+<br> 
 
-```
+![Figure 1: Box plots showing distribution of Lyme Disease cases in NYS across three years.](boxplots_cases_year.png) 
 
+>>>>>>> 69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce
+
+<br>
+
+![Figure 2: Scatter plot of cases per year.](cases_per_year.png)
+
+
+<br>
+
+<<<<<<< HEAD
 ### Relationship between lyme_count and average temperatures per month
 ```{r}
 lyme_vs_avg_temp <- lm(lyme_count ~ jan_19 + feb_19 + mar_19 + apr_19 + may_19 + jun_19 + jul_19 + aug_19 + sep_19 + oct_19 + nov_19 + dec_19 + jan_20 + feb_20 + mar_20 + apr_20 + may_20 + jun_20 + jul_20 + aug_20 + sep_20 + oct_20 + nov_20 + dec_20+ jan_21 + feb_21 + mar_21 + apr_21 + may_21 + jun_21 + jul_21 + aug_21 + sep_21 + oct_21 + nov_21 + dec_21, data = tick_lyme_weather)
@@ -75,61 +71,43 @@ lyme_vs_avg_temp <- lm(lyme_count ~ jan_19 + feb_19 + mar_19 + apr_19 + may_19 +
 broom::tidy(lyme_vs_avg_temp) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
 ```
 Considering that Lyme is generally less prevalent in cold temperature, it makes sense that there is a significantly negative number of lyme in below freezing temperatures. There is a large amount of variation of estimate between each month with not much of a pattern. 
+=======
+![Figure 3: Linear relationship between average annual temperature and number of Lyme Disease cases (r = -0.2407).](correlation.png)
 
-### Relationship between lyme_count and population variables
-```{r}
-lyme_rate_vs_population <- lm(lyme_count ~ tick_population_density + total_ticks_collected, data = tick_lyme_weather)
 
+<br>
+
+![Figure 4: Heat map demonstrating annual average temperature across NYS across all years in dataset (2019-2021).](heatmap.png)
+>>>>>>> 69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce
+
+
+<<<<<<< HEAD
 broom::tidy(lyme_rate_vs_population) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
 ```
 This linear regression analyzes the relationship between Lyme rate and tick population density and total ticks collected. Intercept estimate was 121 (SE: 16.4), with a test statistic of 7.39 and p-value<0.005. Therefore the intercept is highly significant, however the predictors are not. This demonstrates a weak association between Lyme rates and the variables. 
+=======
+<br>
+>>>>>>> 69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce
 
-The calculated square mileage estimate was -0.0305 (SE: 0.0159), with a statistic of -1.92 and a p-value<0.005. 
- 
-### Relationship between lyme_count and area variables
-```{r}
-lyme_rate_vs_area <- lm(lyme_count ~ shape_area  + shape_leng + pop2020, data = tick_lyme_weather)
-
-broom::tidy(lyme_rate_vs_area) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
-
-summary(tick_lyme_weather$pop2020)
-```
- 
-
-### Trying the relationship between lyme_count and area variables, including human population density in 2020
-```{r}
-lyme_rate_vs_area_human <- lm(lyme_count ~ shape_area  + shape_leng  + pop2020, data = tick_lyme_weather)
-
-broom::tidy(lyme_rate_vs_area_human) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
-```
+![Figure 5: Distribution of Lyme disease cases across all three years.](histogram_cases.png)
 
 
-### Relationship between b_burgdorferi_percent and population variables
-```{r}
-b_burgdorferi_percent_vs_population <- lm(b_burgdorferi_percent ~ lyme_count + tick_population_density + total_ticks_collected, data = tick_lyme_weather)
+<br>
 
-broom::tidy(b_burgdorferi_percent_vs_population) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
-```
+![Figure 6: Distribution of the log transformation of Lyme disease cases across all three years.](histogram_log_cases.png)
 
 
-### Logarithmic examination of lyme rate versus number of ticks collected and tick population density
-```{r}
-#Convert everything to a logarithmic format
-tick_lyme_weather_log <- tick_lyme_weather |>
-  mutate(
-    log_total_ticks =log1p(total_ticks_collected), 
-    log_tick_density = log1p(tick_population_density),
-    log_lyme_count = log1p(lyme_count)
-  )
+<br>
 
-# Check for linear relationship with a scatterplot
-ggplot(tick_lyme_weather_log, aes(x = log_tick_density, y = log_lyme_count)) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  labs(title = "Log Tick Density vs Log Lyme Rate",
-       x = "Log Tick Density",
-       y = "Log Lyme Rate")
+![Figure 7: Distribution of average temperatures across all three years.](temperature_distribution.png) 
 
+
+<br>
+
+![Figure 8: Distribution of percent ticks found to carry Lyme disease causing bacteria.](tickwithbdistribution.png)
+
+
+<<<<<<< HEAD
 #Examination of log-linear regression 
 log_model <- lm(log_lyme_count ~ log_total_ticks + log_tick_density + b_burgdorferi_percent, data = tick_lyme_weather_log)
 
@@ -420,3 +398,12 @@ summary_table <- summary_stats %>%
 summary_table
 
 ```
+=======
+# Model Findings
+
+<div style="text-align: center;">
+  <a href="regress.html">
+    Click here to view Table 2. Regression output of the model assessing the relationship between percent of ticks with bacteria that causes Lyme disease in a given county and that county's Lyme disease cases.
+  </a>
+</div> 
+>>>>>>> 69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce

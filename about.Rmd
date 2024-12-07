@@ -2,15 +2,19 @@
 title: "Authorship and Contributions"
 ---
 
+<br>
+
 [Kaleb J. Frierson](kjf2152@columbia.edu)
 
-Kaleb is a second year MPH student in the Department of Epidemiology. His certificate is in Applied Biostatistics and Data Science. His contributions to this project included:
+Kaleb is a second year MPH student in the Department of Epidemiology. His certificate is in Applied Biostatistics and Public Health Data Science. His contributions to this project included:
 
-- Research question development and planning
+- Research question development and planning. 
 - Collaborative brainstorming of data sources, cleaning procedures, exclusion criteria, and analyses given available data. 
 - Development of the project website and primary authorship of the [project report](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
+- Using Tanmayi's maps to create the [Interactive Dashboard](https://kjf2152cumc.github.io/nyslymedisease.github.io/dashboard.html). 
 
 [Mary N. Williams](mnw2132@columbia.edu)
+
 Mary is a second year MPH student in the Department of Epidemiology. Her certificate is in Infectious Disease Epidimiology. Her contributions to this project included:
 
 - Background research for question and development of question
@@ -19,8 +23,15 @@ Mary is a second year MPH student in the Department of Epidemiology. Her certifi
 
 [Sarahy J. Martinez](sjm2284@columbia.edu)
 
+Sarahy is a second year MPH student in the Department of Epidemiology. Her certificate is in Applied Biostatistics and Public Health Data Science. Her contributions to this project included: 
+
+- Importing, cleaning, and tidying various data sources to create a final dataset for the team memebrs to conduct their analyses. 
+- Assisted with scheduling days to meet and provided zoom links for all group meetings. 
+- Assisted with developing the research topic and questions. 
+- Brainstormed kinds of linear models and maps to create during analysis and visualization phase. 
 
 [Tanmayi A. Amanchi](taa2158@columbia.edu) 
+
 Tanmayi is a second year MPH student in the Department of Epidemiology, with a certificate in the Applied Biostatistics and Data Science. Her contributions to this project included:
 
 - Research question development and project planning
