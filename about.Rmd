@@ -17,3 +17,9 @@ Kaleb is a second year MPH student in the Department of Epidemiology. His certif
 
 
 [Tanmayi A. Amanchi](taa2158@columbia.edu) 
+
+Tanmayi is a second year MPH student in the Department of Epidemiology, with a certificate in the Applied Biostatistics and Data Science. Her contributions to this project included:
+
+- Research question development and project planning
+- Organizing weather data from the [National Centers for Environmental Information](https://data.pnj.com/weather-data/new-york/36/1976-03-01/) to be easily read into R.
+- Creating the interactive maps for the [Interactive Dashboard](https://kjf2152cumc.github.io/nyslymedisease.github.io/dashboard.html). 
