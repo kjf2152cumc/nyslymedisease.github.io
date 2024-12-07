@@ -160,7 +160,7 @@ A linear regression model (`lm()`) was fitted to examine the association between
 
 The code associated with regression modeling can be viewed [here](regression_coding.html). 
 
-#Discussion
+# Discussion
 
 Our analysis revealed that the statistical distribution of Lyme disease cases remained consistent across the three years of interest (2019–2021). This suggests a relatively stable burden of disease over time, despite year-to-year variations in environmental and population factors. Through geographic visualization, we observed that areas in the southern part of New York State, including New York City and Long Island, showed higher incidence rates of Lyme disease. While the correlation analysis indicated a slight decrease in Lyme cases as average annual temperature increased, this relationship may be confounded by population density. Warmer areas, such as the southern counties, are also the most densely populated, which could explain the observed trend.
 
