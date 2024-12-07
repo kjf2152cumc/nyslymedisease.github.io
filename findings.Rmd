@@ -1,24 +1,40 @@
 ---
 title: "Analytics"
 ---
-
 Here we can report findings from each of our analyses. 
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+```
 
 # EDA
 
-# Statistics
+## Mary's Exploratory Analysis
 ```{r}
+install.packages("remotes")
+install.packages("broom.helpers")
+remotes::install_github("ddsjoberg/gtsummary")
+library(tidyverse)
+library(rvest)
+library(sf)
+library(purrr)
+library(knitr)
+library(readxl)
+library(gtsummary)
+library(gt)
+```
+
+```{r}
+# Download dataset 
+tick_lyme_weather <- read.csv("tick_lyme_weather.csv")
 # Correct the names for Cattaraugus and St. Lawrance in the dataset
-tick_lyme_weather <- tick_lyme_weather %>%
+tick_lyme_weather <- tick_lyme_weather |>
   mutate(
     name = case_when(
       name == "Cattaragus" ~ "Cattaraugus",
-      name == "St Lawrance" ~ "St. Lawrance",
+      name == "St Lawrence" ~ "St. Lawrence",
       TRUE ~ name))
-
-# Verify the changes
-unique(tick_lyme_weather$name)
-
 ```
 
 ```{r}
@@ -52,22 +68,13 @@ summary_table %>%
 
 ```
 
-### Relationship between tick density and average temperature per month 
-```{r}
-density_vs_avg_temp <- lm(tick_population_density ~ jan_19 + feb_19 + mar_19 + apr_19 + may_19 +jun_19 + jul_19 + aug_19 + sep_19 + oct_19 + nov_19 + dec_19 + jan_20 + feb_20 + mar_20 + apr_20 + may_20 + jun_20 + jul_20 + aug_20 + sep_20 + oct_20 + nov_20 + dec_20+ jan_21 + feb_21 + mar_21 + apr_21 + may_21 + jun_21 + jul_21 + aug_21 + sep_21 + oct_21 + nov_21 + dec_21, data = tick_lyme_weather, na.action = na.exclude) #examine the relationship between tick density and average temperature
-
-broom::tidy(density_vs_avg_temp) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
-```
-This output demonstrates that many of the months show non-significant results, therefore meaning a weak or unclear association of each month with tick density. However some months in 2019, like June (p-value= 0.015) and August (p-value = 0.031), which have significant positive outcomes, and July (p-value < 0.005) had a negative outcome. The intercept was -53.0 with a large of SE of 1,473, and a p-value of 0.971. Therefore  
-NEED TO LOOK AT THE REST OF THE VARIABLES
-
 ### Relationship between lyme_count and average temperatures per month
 ```{r}
 lyme_vs_avg_temp <- lm(lyme_count ~ jan_19 + feb_19 + mar_19 + apr_19 + may_19 + jun_19 + jul_19 + aug_19 + sep_19 + oct_19 + nov_19 + dec_19 + jan_20 + feb_20 + mar_20 + apr_20 + may_20 + jun_20 + jul_20 + aug_20 + sep_20 + oct_20 + nov_20 + dec_20+ jan_21 + feb_21 + mar_21 + apr_21 + may_21 + jun_21 + jul_21 + aug_21 + sep_21 + oct_21 + nov_21 + dec_21, data = tick_lyme_weather)
 
 broom::tidy(lyme_vs_avg_temp) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
 ```
-Lyme count has similar findings to tick density, with strong positive relationships in August 2019, and negative relationships in June 2019. The intercept was -17,100 with a (SE: 3592) and a p-value < 0.005. 
+Considering that Lyme is generally less prevalent in cold temperature, it makes sense that there is a significantly negative number of lyme in below freezing temperatures. There is a large amount of variation of estimate between each month with not much of a pattern. 
 
 ### Relationship between lyme_count and population variables
 ```{r}
@@ -75,7 +82,7 @@ lyme_rate_vs_population <- lm(lyme_count ~ tick_population_density + total_ticks
 
 broom::tidy(lyme_rate_vs_population) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
 ```
-This linear regression analyzes the relationship between Lyme rate and tick population density and total ticks collected. Intercept estimate was 121 (SE: 16.4), with a test statistic of 7.39 and p-value<0.005. Therefore the intercept is highly signficant, however the predictors are not. This demonstrates a weak association between Lyme rates and the variables. 
+This linear regression analyzes the relationship between Lyme rate and tick population density and total ticks collected. Intercept estimate was 121 (SE: 16.4), with a test statistic of 7.39 and p-value<0.005. Therefore the intercept is highly significant, however the predictors are not. This demonstrates a weak association between Lyme rates and the variables. 
 
 The calculated square mileage estimate was -0.0305 (SE: 0.0159), with a statistic of -1.92 and a p-value<0.005. 
  
@@ -125,38 +132,46 @@ ggplot(tick_lyme_weather_log, aes(x = log_tick_density, y = log_lyme_count)) +
 
 #Examination of log-linear regression 
 log_model <- lm(log_lyme_count ~ log_total_ticks + log_tick_density + b_burgdorferi_percent, data = tick_lyme_weather_log)
-summary(log_model)
 
 
-# Analyze seasonal weather effects
-tick_lyme_weather_seasonal <- tick_lyme_weather_log %>%
-  mutate(across(ends_with(c("19", "20", "21")), log1p, .names = "log_{.col}"))
+coefficients_table <- broom::tidy(log_model) |>
+  select(term, estimate, p.value) |>
+  knitr::kable(digits = 3, caption = "Regression Coefficients")
 
-weather_model <- lm(log_lyme_count ~ jan_19 + feb_19 + mar_19 + apr_19 + may_19 + jun_19 + jul_19 + aug_19 + sep_19 + oct_19 + nov_19 + dec_19 + jan_20 + feb_20 + mar_20 + apr_20 + may_20 + jun_20 + jul_20 + aug_20 + sep_20 + oct_20 + nov_20 + dec_20+ jan_21 + feb_21 + mar_21 + apr_21 + may_21 + jun_21 + jul_21 + aug_21 + sep_21 + oct_21 + nov_21 + dec_21, data = tick_lyme_weather_seasonal)
+# Extract model summary statistics
+model_summary <- glance(b_burgdorferi_percent_vs_population)
+summary_table <- data.frame(
+  `Residual Standard Error` = model_summary$sigma,
+  `Multiple R-squared` = model_summary$r.squared,
+  `Adjusted R-squared` = model_summary$adj.r.squared,
+  `F-statistic` = model_summary$statistic,
+  `p-value` = model_summary$p.value
+) |>
+  knitr::kable(digits = 3, caption = "Model Summary")
 
-broom::tidy(weather_model) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
+# Print all tables
+print(coefficients_table)
+print(summary_table)
 ```
 The logarithmic analysis found that the total number of ticks found and the B. burgdoferi percent had a positive, significant association with increased lyme disease rates. 
-<<<<<<< HEAD
-=======
-
-Some interesting findings from looking at the log of the weather variables include that months like  March 2019 ( β=−1.002, p<0.001) and October 2020 (β=1.325, p=0.006) showing strong effects. Meanwhile, months like June 2021 (β=0.848, p=0.001) and July 2021 (β=−1.159, p=0.001)) had contrasting impacts, highlighting intra-annual variability in environmental or biological drivers.These months highlight that tick activity is present whenever the temperature is above freezing, is highly variable. 
 The low R^2 value demonstrates significant variability. Therefore further analysis with environmental, demographic and behavioral data would be beneficial. 
 
-# Kaleb Analytic Edits:
+# Statistics
+
+## Kaleb Analytic Edits:
 
 ```{r}
 # Boxplot of 'lyme_count' per 'year'
 
 data =
-  read_csv("Data Preparation/combined_data_kf.csv")
+  read_csv("./combined_data_kf.csv")
 
 # Fix mispells of Cattaraugus and St. Lawrance
 data <- data %>%
   mutate(
     name = case_when(
       name == "Cattaragus" ~ "Cattaraugus",
-      name == "St Lawrance" ~ "St. Lawrance",
+      name == "St Lawrence" ~ "St. Lawrence",
       TRUE ~ name))
 ```
 
@@ -226,20 +241,17 @@ histogram_logcases
 
 ggsave(
   filename = "histogram_cases.png",
-  plot = histogram_cases,          
-  path = "Results"
+  plot = histogram_cases     
 )
 
 ggsave(
   filename = "boxplots_cases_year.png",
-  plot = boxplots,          
-  path = "Results"
+  plot = boxplots        
 )
 
 ggsave(
   filename = "histogram_log_cases.png", 
-  plot = histogram_logcases, 
-  path = "Results"
+  plot = histogram_logcases
 )
 
 #log10 transformation makes outcome a bit better distributed. 
@@ -270,8 +282,7 @@ histogram_temp
 
 ggsave(
   filename = "temperature_distribution.png",
-  plot = histogram_temp,          
-  path = "Results"
+  plot = histogram_temp
 )
 
 ```
@@ -296,8 +307,7 @@ dis_bad_tick_per
 
 ggsave(
   filename = "tickwithbdistribution.png",
-  plot = dis_bad_tick_per,          
-  path = "Results"
+  plot = dis_bad_tick_per
 )
 
 # percentage of ticks sampled carrying lyme-causing bacteria is normally distributed
@@ -325,8 +335,7 @@ cases_per_year =
 cases_per_year
 ggsave(
   filename = "cases_per_year.png",
-  plot = cases_per_year,          
-  path = "Results"
+  plot = cases_per_year
 )
 
 
@@ -351,8 +360,6 @@ regression_table
 
 gt_table = 
   as_gt(regression_table)
-
-gtsave(gt_table, filename = "Results/regress.html")
 ```
 
 ```{r}
@@ -411,7 +418,5 @@ summary_table <- summary_stats %>%
 
 # Display the table
 summary_table
-
-gtsave(data = summary_table, filename = "Results/table.1.html")
 
 ```
