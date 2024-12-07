@@ -364,7 +364,11 @@ div.tocify {
 </div>
 
 
-<p><br></p>
+<p>Thanks for stopping by : ) This page contains the written
+motivations, methods, and results of our findings. Please explore the
+other tabs of this website for visualizations. Additionally, each step
+in the project report below has links to their associated code and
+visualizations.</p>
 <div id="background" class="section level1">
 <h1>Background</h1>
 <div id="motivation-related-work" class="section level2">
@@ -491,18 +495,16 @@ surveillance, and temperature data, was exported as a CSV file
 href="sarahy_dataclean.html">here</a>.</p>
 </div>
 </div>
-<div id="visual-exploratory-analyses" class="section level1">
-<h1>Visual &amp; Exploratory Analyses</h1>
+<div id="exploratory-visual-analyses" class="section level1">
+<h1>Exploratory &amp; Visual Analyses</h1>
 <p>The dataset was imported from <code>combined_data_kf.csv</code>.
 Minor corrections were applied to fix spelling errors in county names
 (<code>Cattaragus</code> was corrected to <code>Cattaraugus</code>, and
 <code>St Lawrance</code> to <code>St. Lawrance</code>) using the
 <code>mutate()</code> and <code>case_when()</code> functions from the
 <code>dplyr</code> package.</p>
-<p>##Visualizations ##summaries, and ##exploratory statistical
-analyses.</p>
-<div id="summary-statistics" class="section level4">
-<h4>7. <strong>Summary Statistics</strong></h4>
+<div id="summary-statistics" class="section level2">
+<h2>Summary Statistics</h2>
 <p>Descriptive statistics for each county were calculated using
 <code>tbl_summary()</code> and <code>group_by()</code> with summary
 functions. Variables included: - <code>lyme_count</code> -
@@ -514,15 +516,52 @@ saved as an HTML file (<code>Results/table.1.html</code>). - A
 temperature, and mean <code>b_burgdorferi_percent</code>, saved as
 <code>Results/table.1.html</code>.</p>
 </div>
-<div id="trend-analysis" class="section level4">
-<h4>5. <strong>Trend Analysis</strong></h4>
+<div id="cases-over-time" class="section level2">
+<h2>Cases Over Time</h2>
 <p>The total Lyme disease cases per year were summarized using
 <code>group_by()</code> and <code>summarize()</code>. A line plot
 (<code>geom_point()</code> and <code>geom_smooth()</code>) was created
 to visualize trends in total cases, saved as
 <code>cases_per_year.png</code>.</p>
-<p>Justify the steps you took, and show any major changes to your
-ideas.</p>
+</div>
+<div id="geospatial-data-processing-and-visualizations"
+class="section level2">
+<h2>Geospatial Data Processing and Visualizations</h2>
+<p><strong>Data Visualizations for 2019, 2020, and 2021</strong><br />
+- Data was reshaped using <code>pivot_longer()</code> to include
+month-year combinations for temperature analysis. - A function
+<code>generate_map()</code> was defined to filter data by year, overlay
+Lyme disease counts, and produce interactive Leaflet maps. - The
+function used <code>addPolygons()</code> to render counties with color
+gradients representing <code>lyme_count</code> and
+<code>addLegend()</code> to display a legend for case counts.</p>
+<p><strong>Data Visualizations for 2022</strong><br />
+- A heat map of average temperatures by county was created using
+<code>ggplot2</code> with <code>geom_sf()</code> to map
+<code>avg_temp</code>. - Correlation between <code>avg_temp</code> and
+<code>avg_lyme_rate</code> was calculated using <code>cor()</code> and
+visualized with a scatterplot. A linear regression line was overlaid
+using <code>geom_smooth()</code>.</p>
+</div>
+<div id="eda-outputs" class="section level2">
+<h2>EDA Outputs</h2>
+<ul>
+<li><strong>Interactive Maps</strong>: Interactive maps were generated
+for each year using the <code>generate_map()</code> function and saved
+as interactive objects for web embedding.</li>
+<li><strong>Heat Maps</strong>: We generated a heat map of average
+temperatures by county were created for 2022 using
+<code>geom_sf()</code> with color scales
+(<code>scale_fill_viridis_c()</code>).</li>
+<li><strong>Correlation Analysis</strong>: Scatterplots and correlation
+coefficients were used to explore the relationship between temperature
+and Lyme rates.</li>
+</ul>
+<p>Due to file size, each year has its own code. Click the corresponding
+year to view. <a href="2019_interactive_map.html">2019</a> <a
+href="2020_interactive_map.html">2020</a> <a
+href="2021_interactive_map.html">2021</a> <a
+href="2022_interactive_map.html">2022</a></p>
 </div>
 </div>
 <div id="regression-analysis" class="section level1">

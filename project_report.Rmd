@@ -1,7 +1,8 @@
 ---
 title: "Project Report"
 ---
-<br>
+
+Thanks for stopping by : ) This page contains the written motivations, methods, and results of our findings. Please explore the other tabs of this website for visualizations. Additionally, each step in the project report below has links to their associated code and visualizations. 
 
 # Background
 
@@ -89,15 +90,13 @@ The final combined dataset, containing integrated Lyme disease, tick surveillanc
 
 The code associated with this work is available [here](sarahy_dataclean.html). 
 
-# Visual & Exploratory Analyses
+# Exploratory & Visual Analyses
 
 The dataset was imported from `combined_data_kf.csv`. Minor corrections were applied to fix spelling errors in county names (`Cattaragus` was corrected to `Cattaraugus`, and `St Lawrance` to `St. Lawrance`) using the `mutate()` and `case_when()` functions from the `dplyr` package.
 
-##Visualizations
-##summaries, and 
-##exploratory statistical analyses. 
 
-#### 7. **Summary Statistics**
+## Summary Statistics
+
 Descriptive statistics for each county were calculated using `tbl_summary()` and `group_by()` with summary functions. Variables included:
 - `lyme_count`
 - `avg_temp`
@@ -107,10 +106,28 @@ Two summary tables were created:
 - A detailed `tbl_summary` table with summary statistics for all counties, saved as an HTML file (`Results/table.1.html`).
 - A `gt` table summarizing years with data, mean Lyme cases, mean temperature, and mean `b_burgdorferi_percent`, saved as `Results/table.1.html`.
 
-#### 5. **Trend Analysis**
+## Cases Over Time
+
 The total Lyme disease cases per year were summarized using `group_by()` and `summarize()`. A line plot (`geom_point()` and `geom_smooth()`) was created to visualize trends in total cases, saved as `cases_per_year.png`.
 
-Justify the steps you took, and show any major changes to your ideas.
+## Geospatial Data Processing and Visualizations
+
+**Data Visualizations for 2019, 2020, and 2021**  
+   - Data was reshaped using `pivot_longer()` to include month-year combinations for temperature analysis.
+   - A function `generate_map()` was defined to filter data by year, overlay Lyme disease counts, and produce interactive Leaflet maps.
+   - The function used `addPolygons()` to render counties with color gradients representing `lyme_count` and `addLegend()` to display a legend for case counts.
+
+**Data Visualizations for 2022**  
+   - A heat map of average temperatures by county was created using `ggplot2` with `geom_sf()` to map `avg_temp`.
+   - Correlation between `avg_temp` and `avg_lyme_rate` was calculated using `cor()` and visualized with a scatterplot. A linear regression line was overlaid using `geom_smooth()`.
+
+## EDA Outputs
+- **Interactive Maps**: Interactive maps were generated for each year using the `generate_map()` function and saved as interactive objects for web embedding.
+- **Heat Maps**: We generated a heat map of average temperatures by county were created for 2022 using `geom_sf()` with color scales (`scale_fill_viridis_c()`).
+- **Correlation Analysis**: Scatterplots and correlation coefficients were used to explore the relationship between temperature and Lyme rates. 
+
+Due to file size, each year has its own code. Click the corresponding year to view. 
+[2019](2019_interactive_map.html)    [2020](2020_interactive_map.html)    [2021](2021_interactive_map.html)    [2022](2022_interactive_map.html) 
 
 # Regression Analysis 
 
