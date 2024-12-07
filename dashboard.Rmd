@@ -13,24 +13,18 @@ library(flexdashboard)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Distribution of NYS Lyme Diseaes cases in 2019
 
-```{r}
+HTML('<iframe src="lyme_map_2019.html" width="100%" height="600px" style="border:none;"></iframe>')
 
-```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of NYS Lyme Diseaes cases in 2020
 
-```{r}
+HTML('<iframe src="lyme_map_2020.html" width="100%" height="600px" style="border:none;"></iframe>')
 
-```
+### Distribution of NYS Lyme Diseaes cases in 2021
 
-### Chart C
-
-```{r}
-
-```
-
+HTML('<iframe src="lyme_map_2021.html" width="100%" height="600px" style="border:none;"></iframe>')
