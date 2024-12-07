@@ -7,6 +7,8 @@ navbar:
       href: project_report.html
     - text: "Results"
       href: findings.html
+    - text: "Interactive Dashboard"
+      href: dashboard.html
     - text: "About the Authors"
       href: about.html
     - icon: fa-envelope fa-lg

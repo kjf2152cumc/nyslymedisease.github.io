@@ -122,7 +122,7 @@ The total Lyme disease cases per year were summarized using `group_by()` and `su
    - Correlation between `avg_temp` and `avg_lyme_rate` was calculated using `cor()` and visualized with a scatterplot. A linear regression line was overlaid using `geom_smooth()`.
 
 ## EDA Outputs
-- **Interactive Maps**: Interactive maps were generated for each year using the `generate_map()` function and saved as interactive objects for web embedding.
+- **Interactive Maps**: Interactive maps were generated for each year using the `generate_map()` function and saved as interactive objects for web embedding. View them [here](). 
 - **Heat Maps**: We generated a heat map of average temperatures by county were created for 2022 using `geom_sf()` with color scales (`scale_fill_viridis_c()`).
 - **Correlation Analysis**: Scatterplots and correlation coefficients were used to explore the relationship between temperature and Lyme rates. 
 
