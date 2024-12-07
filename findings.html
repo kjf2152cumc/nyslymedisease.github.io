@@ -360,8 +360,8 @@ div.tocify {
 </div>
 
 
-<<<<<<< HEAD
-<p>Here we can report findings from each of our analyses.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Here we can report findings from
+each of our analyses.</p>
 <pre class="r"><code>knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 options(repos = c(CRAN = &quot;https://cloud.r-project.org&quot;))</code></pre>
 <div id="eda" class="section level1">
@@ -372,12 +372,12 @@ options(repos = c(CRAN = &quot;https://cloud.r-project.org&quot;))</code></pre>
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  /var/folders/pj/vmjxwds93714mf9yw4qrzpkw0000gp/T//RtmpR4O4ND/downloaded_packages</code></pre>
+##  /var/folders/pj/vmjxwds93714mf9yw4qrzpkw0000gp/T//RtmpZkzuWt/downloaded_packages</code></pre>
 <pre><code>## Installing package into &#39;/Users/nickywilliams/Library/R/arm64/4.4/library&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  /var/folders/pj/vmjxwds93714mf9yw4qrzpkw0000gp/T//RtmpR4O4ND/downloaded_packages</code></pre>
+##  /var/folders/pj/vmjxwds93714mf9yw4qrzpkw0000gp/T//RtmpZkzuWt/downloaded_packages</code></pre>
 <pre><code>## Using GitHub PAT from the git credential store.</code></pre>
 <pre><code>## Skipping install of &#39;gtsummary&#39; from a github remote, the SHA1 (429f601a) has not changed since last install.
 ##   Use `force = TRUE` to force installation</code></pre>
@@ -401,606 +401,48 @@ options(repos = c(CRAN = &quot;https://cloud.r-project.org&quot;))</code></pre>
 ## 
 ## 
 ## Linking to GEOS 3.11.0, GDAL 3.5.3, PROJ 9.1.0; sf_use_s2() is TRUE</code></pre>
-<div id="table-of-all-relevent-data" class="section level3">
-<h3>Table of all relevent data</h3>
-<table>
-<caption>Summary of Variables by County</caption>
-<colgroup>
-<col width="10%" />
-<col width="9%" />
-<col width="13%" />
-<col width="17%" />
-<col width="15%" />
-<col width="21%" />
-<col width="12%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">name</th>
-<th align="right">total_cases</th>
-<th align="right">total_lyme_count</th>
-<th align="right">total_ticks_collected</th>
-<th align="right">prevalence_percent</th>
-<th align="right">mean_b_burgdorferi_percent</th>
-<th align="right">n_observations</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Albany</td>
-<td align="right">279.0</td>
-<td align="right">2595</td>
-<td align="right">973</td>
-<td align="right">9300</td>
-<td align="right">6236.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Allegany</td>
-<td align="right">126.9</td>
-<td align="right">177</td>
-<td align="right">954</td>
-<td align="right">4230</td>
-<td align="right">5533.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Bronx</td>
-<td align="right">1.8</td>
-<td align="right">78</td>
-<td align="right">0</td>
-<td align="right">180</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Broome</td>
-<td align="right">326.8</td>
-<td align="right">1906</td>
-<td align="right">31</td>
-<td align="right">16340</td>
-<td align="right">5705.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Cattaraugus</td>
-<td align="right">82.6</td>
-<td align="right">190</td>
-<td align="right">2106</td>
-<td align="right">4130</td>
-<td align="right">5443.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Cayuga</td>
-<td align="right">125.1</td>
-<td align="right">288</td>
-<td align="right">317</td>
-<td align="right">4170</td>
-<td align="right">5666.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Chautauqua</td>
-<td align="right">40.8</td>
-<td align="right">156</td>
-<td align="right">607</td>
-<td align="right">1360</td>
-<td align="right">5936.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Chemung</td>
-<td align="right">46.6</td>
-<td align="right">117</td>
-<td align="right">271</td>
-<td align="right">4660</td>
-<td align="right">5600.00</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Chenango</td>
-<td align="right">358.6</td>
-<td align="right">508</td>
-<td align="right">82</td>
-<td align="right">17930</td>
-<td align="right">6695.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">Clinton</td>
-<td align="right">166.5</td>
-<td align="right">402</td>
-<td align="right">470</td>
-<td align="right">5550</td>
-<td align="right">6043.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Columbia</td>
-<td align="right">1340.4</td>
-<td align="right">2436</td>
-<td align="right">1754</td>
-<td align="right">44680</td>
-<td align="right">5660.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Cortland</td>
-<td align="right">152.9</td>
-<td align="right">217</td>
-<td align="right">51</td>
-<td align="right">15290</td>
-<td align="right">5290.00</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Delaware</td>
-<td align="right">541.8</td>
-<td align="right">726</td>
-<td align="right">373</td>
-<td align="right">18060</td>
-<td align="right">5556.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Dutchess</td>
-<td align="right">354.0</td>
-<td align="right">3135</td>
-<td align="right">692</td>
-<td align="right">11800</td>
-<td align="right">5836.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Erie</td>
-<td align="right">54.3</td>
-<td align="right">1515</td>
-<td align="right">360</td>
-<td align="right">1810</td>
-<td align="right">4666.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Essex</td>
-<td align="right">230.6</td>
-<td align="right">258</td>
-<td align="right">404</td>
-<td align="right">11530</td>
-<td align="right">5890.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Franklin</td>
-<td align="right">182.7</td>
-<td align="right">270</td>
-<td align="right">242</td>
-<td align="right">6090</td>
-<td align="right">4676.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Fulton</td>
-<td align="right">297.6</td>
-<td align="right">477</td>
-<td align="right">431</td>
-<td align="right">9920</td>
-<td align="right">5723.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Genesee</td>
-<td align="right">51.9</td>
-<td align="right">90</td>
-<td align="right">101</td>
-<td align="right">1730</td>
-<td align="right">5056.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Greene</td>
-<td align="right">1281.3</td>
-<td align="right">1836</td>
-<td align="right">758</td>
-<td align="right">42710</td>
-<td align="right">5893.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Hamilton</td>
-<td align="right">64.2</td>
-<td align="right">9</td>
-<td align="right">7</td>
-<td align="right">2140</td>
-<td align="right">2500.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Herkimer</td>
-<td align="right">54.5</td>
-<td align="right">100</td>
-<td align="right">97</td>
-<td align="right">5450</td>
-<td align="right">3800.00</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Jefferson</td>
-<td align="right">149.1</td>
-<td align="right">510</td>
-<td align="right">192</td>
-<td align="right">4970</td>
-<td align="right">7756.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Kings</td>
-<td align="right">11.6</td>
-<td align="right">906</td>
-<td align="right">0</td>
-<td align="right">1160</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Lewis</td>
-<td align="right">153.0</td>
-<td align="right">122</td>
-<td align="right">0</td>
-<td align="right">15300</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Livingston</td>
-<td align="right">77.6</td>
-<td align="right">146</td>
-<td align="right">266</td>
-<td align="right">3880</td>
-<td align="right">6000.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Madison</td>
-<td align="right">57.7</td>
-<td align="right">121</td>
-<td align="right">60</td>
-<td align="right">5770</td>
-<td align="right">5000.00</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Monroe</td>
-<td align="right">32.1</td>
-<td align="right">723</td>
-<td align="right">642</td>
-<td align="right">1070</td>
-<td align="right">5063.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Montgomery</td>
-<td align="right">177.6</td>
-<td align="right">264</td>
-<td align="right">602</td>
-<td align="right">5920</td>
-<td align="right">5480.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Nassau</td>
-<td align="right">9.4</td>
-<td align="right">387</td>
-<td align="right">0</td>
-<td align="right">940</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">New York</td>
-<td align="right">33.6</td>
-<td align="right">1624</td>
-<td align="right">0</td>
-<td align="right">1680</td>
-<td align="right">NaN</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">Niagara</td>
-<td align="right">3.2</td>
-<td align="right">20</td>
-<td align="right">73</td>
-<td align="right">160</td>
-<td align="right">4675.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Oneida</td>
-<td align="right">171.9</td>
-<td align="right">1185</td>
-<td align="right">444</td>
-<td align="right">5730</td>
-<td align="right">5266.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Onondaga</td>
-<td align="right">67.8</td>
-<td align="right">945</td>
-<td align="right">308</td>
-<td align="right">2260</td>
-<td align="right">4653.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Ontario</td>
-<td align="right">75.9</td>
-<td align="right">252</td>
-<td align="right">424</td>
-<td align="right">2530</td>
-<td align="right">6343.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Orange</td>
-<td align="right">225.3</td>
-<td align="right">2634</td>
-<td align="right">360</td>
-<td align="right">7510</td>
-<td align="right">4866.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Orleans</td>
-<td align="right">24.9</td>
-<td align="right">30</td>
-<td align="right">43</td>
-<td align="right">830</td>
-<td align="right">4113.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Oswego</td>
-<td align="right">240.3</td>
-<td align="right">849</td>
-<td align="right">454</td>
-<td align="right">8010</td>
-<td align="right">5650.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Otsego</td>
-<td align="right">520.5</td>
-<td align="right">939</td>
-<td align="right">897</td>
-<td align="right">17350</td>
-<td align="right">6176.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Putnam</td>
-<td align="right">237.6</td>
-<td align="right">703</td>
-<td align="right">0</td>
-<td align="right">23760</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Queens</td>
-<td align="right">4.9</td>
-<td align="right">336</td>
-<td align="right">0</td>
-<td align="right">490</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Rensselaer</td>
-<td align="right">764.4</td>
-<td align="right">3666</td>
-<td align="right">1206</td>
-<td align="right">25480</td>
-<td align="right">5626.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Richmond</td>
-<td align="right">10.8</td>
-<td align="right">156</td>
-<td align="right">0</td>
-<td align="right">1080</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Rockland</td>
-<td align="right">145.8</td>
-<td align="right">1443</td>
-<td align="right">331</td>
-<td align="right">4860</td>
-<td align="right">4600.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Saratoga</td>
-<td align="right">212.4</td>
-<td align="right">1482</td>
-<td align="right">1835</td>
-<td align="right">7080</td>
-<td align="right">6006.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Schenectady</td>
-<td align="right">291.9</td>
-<td align="right">1374</td>
-<td align="right">968</td>
-<td align="right">9730</td>
-<td align="right">5590.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Schoharie</td>
-<td align="right">509.1</td>
-<td align="right">471</td>
-<td align="right">571</td>
-<td align="right">16970</td>
-<td align="right">5473.33</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Schuyler</td>
-<td align="right">463.6</td>
-<td align="right">248</td>
-<td align="right">154</td>
-<td align="right">23180</td>
-<td align="right">6100.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Seneca</td>
-<td align="right">109.6</td>
-<td align="right">112</td>
-<td align="right">108</td>
-<td align="right">5480</td>
-<td align="right">5100.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">St. Lawrence</td>
-<td align="right">82.3</td>
-<td align="right">268</td>
-<td align="right">97</td>
-<td align="right">8230</td>
-<td align="right">4600.00</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Steuben</td>
-<td align="right">127.0</td>
-<td align="right">362</td>
-<td align="right">792</td>
-<td align="right">6350</td>
-<td align="right">6400.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">St Lawrence</td>
-<td align="right">0.0</td>
-<td align="right">0</td>
-<td align="right">241</td>
-<td align="right">NaN</td>
-<td align="right">4500.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Suffolk</td>
-<td align="right">84.6</td>
-<td align="right">3807</td>
-<td align="right">5267</td>
-<td align="right">2820</td>
-<td align="right">5076.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Sullivan</td>
-<td align="right">180.9</td>
-<td align="right">417</td>
-<td align="right">463</td>
-<td align="right">6030</td>
-<td align="right">5200.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Tioga</td>
-<td align="right">160.6</td>
-<td align="right">233</td>
-<td align="right">0</td>
-<td align="right">16060</td>
-<td align="right">NaN</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Tompkins</td>
-<td align="right">390.9</td>
-<td align="right">1215</td>
-<td align="right">266</td>
-<td align="right">13030</td>
-<td align="right">5236.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Ulster</td>
-<td align="right">364.5</td>
-<td align="right">1971</td>
-<td align="right">350</td>
-<td align="right">12150</td>
-<td align="right">5690.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Warren</td>
-<td align="right">455.4</td>
-<td align="right">885</td>
-<td align="right">342</td>
-<td align="right">15180</td>
-<td align="right">4936.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Washington</td>
-<td align="right">527.7</td>
-<td align="right">969</td>
-<td align="right">1022</td>
-<td align="right">17590</td>
-<td align="right">5496.67</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Wayne</td>
-<td align="right">44.2</td>
-<td align="right">120</td>
-<td align="right">72</td>
-<td align="right">4420</td>
-<td align="right">6000.00</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Westchester</td>
-<td align="right">50.4</td>
-<td align="right">1479</td>
-<td align="right">350</td>
-<td align="right">1680</td>
-<td align="right">4800.00</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Wyoming</td>
-<td align="right">48.2</td>
-<td align="right">58</td>
-<td align="right">138</td>
-<td align="right">2410</td>
-<td align="right">4135.00</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Yates</td>
-<td align="right">73.8</td>
-<td align="right">55</td>
-<td align="right">15</td>
-<td align="right">7380</td>
-<td align="right">2000.00</td>
-<td align="right">1</td>
-</tr>
-</tbody>
-</table>
+<p>=======</p>
 </div>
-<div
-id="relationship-between-lyme_count-and-average-temperatures-per-month"
-class="section level3">
-<h3>Relationship between lyme_count and average temperatures per
-month</h3>
+</div>
+<div id="exploratory-findings" class="section level1">
+<h1>Exploratory Findings</h1>
+<div style="text-align: center;">
+<p><a href="table.1.html"> Click to view Table 1. Summary statistics
+including number of cases, percent of ticks with bacteria that causes
+Lyme disease, and average temperature over the course of three years.
+</a></p>
+</div>
+<p><br></p>
+<div class="float">
+<img src="boxplots_cases_year.png"
+alt="Figure 1: Box plots showing distribution of Lyme Disease cases in NYS across three years." />
+<div class="figcaption">Figure 1: Box plots showing distribution of Lyme
+Disease cases in NYS across three years.</div>
+</div>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><br></p>
+<div class="float">
+<img src="cases_per_year.png"
+alt="Figure 2: Scatter plot of cases per year." />
+<div class="figcaption">Figure 2: Scatter plot of cases per year.</div>
+</div>
+<p><br></p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ### Relationship between lyme_count
+and average temperatures per month</p>
 <table>
 <thead>
 <tr class="header">
@@ -1202,187 +644,67 @@ temperature, it makes sense that there is a significantly negative
 number of lyme in below freezing temperatures. There is a large amount
 of variation of estimate between each month with not much of a
 pattern.</p>
-</div>
-<div id="relationship-between-lyme_count-and-population-variables"
-class="section level3">
-<h3>Relationship between lyme_count and population variables</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">p.value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">236.969</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="even">
-<td align="left">tick_population_density</td>
-<td align="right">-0.403</td>
-<td align="right">0.489</td>
-</tr>
-<tr class="odd">
-<td align="left">total_ticks_collected</td>
-<td align="right">0.596</td>
-<td align="right">0.000</td>
-</tr>
-</tbody>
-</table>
-<p>This linear regression analyzes the relationship between Lyme rate
-and tick population density and total ticks collected. Intercept
-estimate was 121 (SE: 16.4), with a test statistic of 7.39 and
-p-value&lt;0.005. Therefore the intercept is highly significant, however
-the predictors are not. This demonstrates a weak association between
-Lyme rates and the variables.</p>
-<p>The calculated square mileage estimate was -0.0305 (SE: 0.0159), with
-a statistic of -1.92 and a p-value&lt;0.005.</p>
-</div>
-<div id="relationship-between-lyme_count-and-area-variables"
-class="section level3">
-<h3>Relationship between lyme_count and area variables</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">p.value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">259.909</td>
-<td align="right">0.014</td>
-</tr>
-<tr class="even">
-<td align="left">shape_area</td>
-<td align="right">0.000</td>
-<td align="right">0.657</td>
-</tr>
-<tr class="odd">
-<td align="left">shape_leng</td>
-<td align="right">0.000</td>
-<td align="right">0.763</td>
-</tr>
-<tr class="even">
-<td align="left">pop2020</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-</tbody>
-</table>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##    5107   49532   92434  273104  234663 2736074       2</code></pre>
-</div>
-<div
-id="trying-the-relationship-between-lyme_count-and-area-variables-including-human-population-density-in-2020"
-class="section level3">
-<h3>Trying the relationship between lyme_count and area variables,
-including human population density in 2020</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">p.value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">259.909</td>
-<td align="right">0.014</td>
-</tr>
-<tr class="even">
-<td align="left">shape_area</td>
-<td align="right">0.000</td>
-<td align="right">0.657</td>
-</tr>
-<tr class="odd">
-<td align="left">shape_leng</td>
-<td align="right">0.000</td>
-<td align="right">0.763</td>
-</tr>
-<tr class="even">
-<td align="left">pop2020</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div
-id="relationship-between-b_burgdorferi_percent-and-population-variables"
-class="section level3">
-<h3>Relationship between b_burgdorferi_percent and population
-variables</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">p.value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">49.796</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="even">
-<td align="left">lyme_count</td>
-<td align="right">0.004</td>
-<td align="right">0.302</td>
-</tr>
-<tr class="odd">
-<td align="left">tick_population_density</td>
-<td align="right">0.056</td>
-<td align="right">0.025</td>
-</tr>
-<tr class="even">
-<td align="left">total_ticks_collected</td>
-<td align="right">-0.002</td>
-<td align="right">0.651</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div
-id="logarithmic-examination-of-lyme-rate-versus-number-of-ticks-collected-and-tick-population-density"
-class="section level3">
-<h3>Logarithmic examination of lyme rate versus number of ticks
-collected and tick population density</h3>
-<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
-<p><img src="findings_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<pre><code>## 
-## 
-## Table: Regression Coefficients
-## 
-## |term                  | estimate| p.value|
-## |:---------------------|--------:|-------:|
-## |(Intercept)           |    1.669|   0.001|
-## |log_total_ticks       |    0.697|   0.000|
-## |log_tick_density      |   -0.161|   0.270|
-## |b_burgdorferi_percent |    0.015|   0.046|</code></pre>
-<pre><code>## 
-## 
-## Table: Model Summary
-## 
-## |      | Residual.Standard.Error| Multiple.R.squared| Adjusted.R.squared| F.statistic| p.value|
-## |:-----|-----------------------:|------------------:|------------------:|-----------:|-------:|
-## |value |                  12.019|              0.047|              0.025|       2.146|   0.097|</code></pre>
+<p>======= <img src="correlation.png"
+alt="Figure 3: Linear relationship between average annual temperature and number of Lyme Disease cases (r = -0.2407)." /></p>
+<p><br></p>
+<p><img src="heatmap.png"
+alt="Figure 4: Heat map demonstrating annual average temperature across NYS across all years in dataset (2019-2021)." />
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+broom::tidy(lyme_rate_vs_population) |&gt; select(term, estimate,
+p.value) |&gt;knitr::kable(digits =3)</p>
+<pre><code>This linear regression analyzes the relationship between Lyme rate and tick population density and total ticks collected. Intercept estimate was 121 (SE: 16.4), with a test statistic of 7.39 and p-value&lt;0.005. Therefore the intercept is highly significant, however the predictors are not. This demonstrates a weak association between Lyme rates and the variables. 
+=======
+&lt;br&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce
+
+![Figure 5: Distribution of Lyme disease cases across all three years.](histogram_cases.png)
+
+
+&lt;br&gt;
+
+![Figure 6: Distribution of the log transformation of Lyme disease cases across all three years.](histogram_log_cases.png)
+
+
+&lt;br&gt;
+
+![Figure 7: Distribution of average temperatures across all three years.](temperature_distribution.png) 
+
+
+&lt;br&gt;
+
+![Figure 8: Distribution of percent ticks found to carry Lyme disease causing bacteria.](tickwithbdistribution.png)
+
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+#Examination of log-linear regression 
+log_model &lt;- lm(log_lyme_count ~ log_total_ticks + log_tick_density + b_burgdorferi_percent, data = tick_lyme_weather_log)
+
+
+coefficients_table &lt;- broom::tidy(log_model) |&gt;
+  select(term, estimate, p.value) |&gt;
+  knitr::kable(digits = 3, caption = &quot;Regression Coefficients&quot;)
+
+# Extract model summary statistics
+model_summary &lt;- glance(b_burgdorferi_percent_vs_population)
+summary_table &lt;- data.frame(
+  `Residual Standard Error` = model_summary$sigma,
+  `Multiple R-squared` = model_summary$r.squared,
+  `Adjusted R-squared` = model_summary$adj.r.squared,
+  `F-statistic` = model_summary$statistic,
+  `p-value` = model_summary$p.value
+) |&gt;
+  knitr::kable(digits = 3, caption = &quot;Model Summary&quot;)
+
+# Print all tables
+print(coefficients_table)
+print(summary_table)</code></pre>
 <p>The logarithmic analysis found that the total number of ticks found
 and the B. burgdoferi percent had a positive, significant association
 with increased lyme disease rates. The low R^2 value demonstrates
 significant variability. Therefore further analysis with environmental,
 demographic and behavioral data would be beneficial.</p>
-</div>
-</div>
 </div>
 <div id="statistics" class="section level1">
 <h1>Statistics</h1>
@@ -1398,16 +720,16 @@ demographic and behavioral data would be beneficial.</p>
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<p><img src="findings_files/figure-html/unnamed-chunk-13-1.png" width="672" /><img src="findings_files/figure-html/unnamed-chunk-13-2.png" width="672" /><img src="findings_files/figure-html/unnamed-chunk-13-3.png" width="672" /></p>
+<p><img src="findings_files/figure-html/unnamed-chunk-6-1.png" width="672" /><img src="findings_files/figure-html/unnamed-chunk-6-2.png" width="672" /><img src="findings_files/figure-html/unnamed-chunk-6-3.png" width="672" /></p>
 <pre><code>## Saving 7 x 5 in image
 ## Saving 7 x 5 in image
 ## Saving 7 x 5 in image</code></pre>
-<p><img src="findings_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="findings_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <pre><code>## Saving 7 x 5 in image</code></pre>
-<p><img src="findings_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="findings_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
-<p><img src="findings_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="findings_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <pre><code>## Saving 7 x 5 in image
 ## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
 <pre><code>## 
@@ -1430,23 +752,23 @@ demographic and behavioral data would be beneficial.</p>
 ##   (3 observations deleted due to missingness)
 ## Multiple R-squared:  0.2131, Adjusted R-squared:  0.2012 
 ## F-statistic: 17.87 on 2 and 132 DF,  p-value: 1.353e-07</code></pre>
-<div id="iqjeeffjbq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iqjeeffjbq table {
+<div id="uxjfnzdpny" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uxjfnzdpny table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iqjeeffjbq thead, #iqjeeffjbq tbody, #iqjeeffjbq tfoot, #iqjeeffjbq tr, #iqjeeffjbq td, #iqjeeffjbq th {
+#uxjfnzdpny thead, #uxjfnzdpny tbody, #uxjfnzdpny tfoot, #uxjfnzdpny tr, #uxjfnzdpny td, #uxjfnzdpny th {
   border-style: none;
 }
 
-#iqjeeffjbq p {
+#uxjfnzdpny p {
   margin: 0;
   padding: 0;
 }
 
-#iqjeeffjbq .gt_table {
+#uxjfnzdpny .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1472,12 +794,12 @@ demographic and behavioral data would be beneficial.</p>
   border-left-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_caption {
+#uxjfnzdpny .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iqjeeffjbq .gt_title {
+#uxjfnzdpny .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1489,7 +811,7 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-width: 0;
 }
 
-#iqjeeffjbq .gt_subtitle {
+#uxjfnzdpny .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1501,7 +823,7 @@ demographic and behavioral data would be beneficial.</p>
   border-top-width: 0;
 }
 
-#iqjeeffjbq .gt_heading {
+#uxjfnzdpny .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1513,13 +835,13 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_bottom_border {
+#uxjfnzdpny .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_col_headings {
+#uxjfnzdpny .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1534,7 +856,7 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_col_heading {
+#uxjfnzdpny .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1554,7 +876,7 @@ demographic and behavioral data would be beneficial.</p>
   overflow-x: hidden;
 }
 
-#iqjeeffjbq .gt_column_spanner_outer {
+#uxjfnzdpny .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1566,15 +888,15 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 4px;
 }
 
-#iqjeeffjbq .gt_column_spanner_outer:first-child {
+#uxjfnzdpny .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iqjeeffjbq .gt_column_spanner_outer:last-child {
+#uxjfnzdpny .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iqjeeffjbq .gt_column_spanner {
+#uxjfnzdpny .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1586,11 +908,11 @@ demographic and behavioral data would be beneficial.</p>
   width: 100%;
 }
 
-#iqjeeffjbq .gt_spanner_row {
+#uxjfnzdpny .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iqjeeffjbq .gt_group_heading {
+#uxjfnzdpny .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1616,7 +938,7 @@ demographic and behavioral data would be beneficial.</p>
   text-align: left;
 }
 
-#iqjeeffjbq .gt_empty_group_heading {
+#uxjfnzdpny .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1631,15 +953,15 @@ demographic and behavioral data would be beneficial.</p>
   vertical-align: middle;
 }
 
-#iqjeeffjbq .gt_from_md > :first-child {
+#uxjfnzdpny .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iqjeeffjbq .gt_from_md > :last-child {
+#uxjfnzdpny .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iqjeeffjbq .gt_row {
+#uxjfnzdpny .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1658,7 +980,7 @@ demographic and behavioral data would be beneficial.</p>
   overflow-x: hidden;
 }
 
-#iqjeeffjbq .gt_stub {
+#uxjfnzdpny .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1671,7 +993,7 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#iqjeeffjbq .gt_stub_row_group {
+#uxjfnzdpny .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1685,15 +1007,15 @@ demographic and behavioral data would be beneficial.</p>
   vertical-align: top;
 }
 
-#iqjeeffjbq .gt_row_group_first td {
+#uxjfnzdpny .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iqjeeffjbq .gt_row_group_first th {
+#uxjfnzdpny .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iqjeeffjbq .gt_summary_row {
+#uxjfnzdpny .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1703,16 +1025,16 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#iqjeeffjbq .gt_first_summary_row {
+#uxjfnzdpny .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_first_summary_row.thick {
+#uxjfnzdpny .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iqjeeffjbq .gt_last_summary_row {
+#uxjfnzdpny .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1722,7 +1044,7 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_grand_summary_row {
+#uxjfnzdpny .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1732,7 +1054,7 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#iqjeeffjbq .gt_first_grand_summary_row {
+#uxjfnzdpny .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1742,7 +1064,7 @@ demographic and behavioral data would be beneficial.</p>
   border-top-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_last_grand_summary_row_top {
+#uxjfnzdpny .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1752,11 +1074,11 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_striped {
+#uxjfnzdpny .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iqjeeffjbq .gt_table_body {
+#uxjfnzdpny .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1765,7 +1087,7 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_footnotes {
+#uxjfnzdpny .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1779,7 +1101,7 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_footnote {
+#uxjfnzdpny .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1788,7 +1110,7 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#iqjeeffjbq .gt_sourcenotes {
+#uxjfnzdpny .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1802,7 +1124,7 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#iqjeeffjbq .gt_sourcenote {
+#uxjfnzdpny .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1810,72 +1132,72 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#iqjeeffjbq .gt_left {
+#uxjfnzdpny .gt_left {
   text-align: left;
 }
 
-#iqjeeffjbq .gt_center {
+#uxjfnzdpny .gt_center {
   text-align: center;
 }
 
-#iqjeeffjbq .gt_right {
+#uxjfnzdpny .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iqjeeffjbq .gt_font_normal {
+#uxjfnzdpny .gt_font_normal {
   font-weight: normal;
 }
 
-#iqjeeffjbq .gt_font_bold {
+#uxjfnzdpny .gt_font_bold {
   font-weight: bold;
 }
 
-#iqjeeffjbq .gt_font_italic {
+#uxjfnzdpny .gt_font_italic {
   font-style: italic;
 }
 
-#iqjeeffjbq .gt_super {
+#uxjfnzdpny .gt_super {
   font-size: 65%;
 }
 
-#iqjeeffjbq .gt_footnote_marks {
+#uxjfnzdpny .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iqjeeffjbq .gt_asterisk {
+#uxjfnzdpny .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iqjeeffjbq .gt_indent_1 {
+#uxjfnzdpny .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iqjeeffjbq .gt_indent_2 {
+#uxjfnzdpny .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iqjeeffjbq .gt_indent_3 {
+#uxjfnzdpny .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iqjeeffjbq .gt_indent_4 {
+#uxjfnzdpny .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iqjeeffjbq .gt_indent_5 {
+#uxjfnzdpny .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iqjeeffjbq .katex-display {
+#uxjfnzdpny .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iqjeeffjbq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uxjfnzdpny div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1910,23 +1232,23 @@ demographic and behavioral data would be beneficial.</p>
   </tfoot>
 </table>
 </div>
-<div id="prevocpikw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#prevocpikw table {
+<div id="nczzrkevsx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nczzrkevsx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#prevocpikw thead, #prevocpikw tbody, #prevocpikw tfoot, #prevocpikw tr, #prevocpikw td, #prevocpikw th {
+#nczzrkevsx thead, #nczzrkevsx tbody, #nczzrkevsx tfoot, #nczzrkevsx tr, #nczzrkevsx td, #nczzrkevsx th {
   border-style: none;
 }
 
-#prevocpikw p {
+#nczzrkevsx p {
   margin: 0;
   padding: 0;
 }
 
-#prevocpikw .gt_table {
+#nczzrkevsx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1952,12 +1274,12 @@ demographic and behavioral data would be beneficial.</p>
   border-left-color: #D3D3D3;
 }
 
-#prevocpikw .gt_caption {
+#nczzrkevsx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#prevocpikw .gt_title {
+#nczzrkevsx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1969,7 +1291,7 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-width: 0;
 }
 
-#prevocpikw .gt_subtitle {
+#nczzrkevsx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1981,7 +1303,7 @@ demographic and behavioral data would be beneficial.</p>
   border-top-width: 0;
 }
 
-#prevocpikw .gt_heading {
+#nczzrkevsx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1993,13 +1315,13 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#prevocpikw .gt_bottom_border {
+#nczzrkevsx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#prevocpikw .gt_col_headings {
+#nczzrkevsx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2014,7 +1336,7 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#prevocpikw .gt_col_heading {
+#nczzrkevsx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2034,7 +1356,7 @@ demographic and behavioral data would be beneficial.</p>
   overflow-x: hidden;
 }
 
-#prevocpikw .gt_column_spanner_outer {
+#nczzrkevsx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2046,15 +1368,15 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 4px;
 }
 
-#prevocpikw .gt_column_spanner_outer:first-child {
+#nczzrkevsx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#prevocpikw .gt_column_spanner_outer:last-child {
+#nczzrkevsx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#prevocpikw .gt_column_spanner {
+#nczzrkevsx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2066,11 +1388,11 @@ demographic and behavioral data would be beneficial.</p>
   width: 100%;
 }
 
-#prevocpikw .gt_spanner_row {
+#nczzrkevsx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#prevocpikw .gt_group_heading {
+#nczzrkevsx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2096,7 +1418,7 @@ demographic and behavioral data would be beneficial.</p>
   text-align: left;
 }
 
-#prevocpikw .gt_empty_group_heading {
+#nczzrkevsx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2111,15 +1433,15 @@ demographic and behavioral data would be beneficial.</p>
   vertical-align: middle;
 }
 
-#prevocpikw .gt_from_md > :first-child {
+#nczzrkevsx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#prevocpikw .gt_from_md > :last-child {
+#nczzrkevsx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#prevocpikw .gt_row {
+#nczzrkevsx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2138,7 +1460,7 @@ demographic and behavioral data would be beneficial.</p>
   overflow-x: hidden;
 }
 
-#prevocpikw .gt_stub {
+#nczzrkevsx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2151,7 +1473,7 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#prevocpikw .gt_stub_row_group {
+#nczzrkevsx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2165,15 +1487,15 @@ demographic and behavioral data would be beneficial.</p>
   vertical-align: top;
 }
 
-#prevocpikw .gt_row_group_first td {
+#nczzrkevsx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#prevocpikw .gt_row_group_first th {
+#nczzrkevsx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#prevocpikw .gt_summary_row {
+#nczzrkevsx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2183,16 +1505,16 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#prevocpikw .gt_first_summary_row {
+#nczzrkevsx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#prevocpikw .gt_first_summary_row.thick {
+#nczzrkevsx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#prevocpikw .gt_last_summary_row {
+#nczzrkevsx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2202,7 +1524,7 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#prevocpikw .gt_grand_summary_row {
+#nczzrkevsx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2212,7 +1534,7 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#prevocpikw .gt_first_grand_summary_row {
+#nczzrkevsx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2222,7 +1544,7 @@ demographic and behavioral data would be beneficial.</p>
   border-top-color: #D3D3D3;
 }
 
-#prevocpikw .gt_last_grand_summary_row_top {
+#nczzrkevsx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2232,11 +1554,11 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#prevocpikw .gt_striped {
+#nczzrkevsx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#prevocpikw .gt_table_body {
+#nczzrkevsx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2245,7 +1567,7 @@ demographic and behavioral data would be beneficial.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#prevocpikw .gt_footnotes {
+#nczzrkevsx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2259,7 +1581,7 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#prevocpikw .gt_footnote {
+#nczzrkevsx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2268,7 +1590,7 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#prevocpikw .gt_sourcenotes {
+#nczzrkevsx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2282,7 +1604,7 @@ demographic and behavioral data would be beneficial.</p>
   border-right-color: #D3D3D3;
 }
 
-#prevocpikw .gt_sourcenote {
+#nczzrkevsx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2290,72 +1612,72 @@ demographic and behavioral data would be beneficial.</p>
   padding-right: 5px;
 }
 
-#prevocpikw .gt_left {
+#nczzrkevsx .gt_left {
   text-align: left;
 }
 
-#prevocpikw .gt_center {
+#nczzrkevsx .gt_center {
   text-align: center;
 }
 
-#prevocpikw .gt_right {
+#nczzrkevsx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#prevocpikw .gt_font_normal {
+#nczzrkevsx .gt_font_normal {
   font-weight: normal;
 }
 
-#prevocpikw .gt_font_bold {
+#nczzrkevsx .gt_font_bold {
   font-weight: bold;
 }
 
-#prevocpikw .gt_font_italic {
+#nczzrkevsx .gt_font_italic {
   font-style: italic;
 }
 
-#prevocpikw .gt_super {
+#nczzrkevsx .gt_super {
   font-size: 65%;
 }
 
-#prevocpikw .gt_footnote_marks {
+#nczzrkevsx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#prevocpikw .gt_asterisk {
+#nczzrkevsx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#prevocpikw .gt_indent_1 {
+#nczzrkevsx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#prevocpikw .gt_indent_2 {
+#nczzrkevsx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#prevocpikw .gt_indent_3 {
+#nczzrkevsx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#prevocpikw .gt_indent_4 {
+#nczzrkevsx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#prevocpikw .gt_indent_5 {
+#nczzrkevsx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#prevocpikw .katex-display {
+#nczzrkevsx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#prevocpikw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nczzrkevsx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2758,23 +2080,23 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   </tfoot>
 </table>
 </div>
-<div id="udlcclejoa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#udlcclejoa table {
+<div id="hsrehqrlif" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hsrehqrlif table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#udlcclejoa thead, #udlcclejoa tbody, #udlcclejoa tfoot, #udlcclejoa tr, #udlcclejoa td, #udlcclejoa th {
+#hsrehqrlif thead, #hsrehqrlif tbody, #hsrehqrlif tfoot, #hsrehqrlif tr, #hsrehqrlif td, #hsrehqrlif th {
   border-style: none;
 }
 
-#udlcclejoa p {
+#hsrehqrlif p {
   margin: 0;
   padding: 0;
 }
 
-#udlcclejoa .gt_table {
+#hsrehqrlif .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2800,12 +2122,12 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-left-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_caption {
+#hsrehqrlif .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#udlcclejoa .gt_title {
+#hsrehqrlif .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2817,7 +2139,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-bottom-width: 0;
 }
 
-#udlcclejoa .gt_subtitle {
+#hsrehqrlif .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2829,7 +2151,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-top-width: 0;
 }
 
-#udlcclejoa .gt_heading {
+#hsrehqrlif .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2841,13 +2163,13 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-right-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_bottom_border {
+#hsrehqrlif .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_col_headings {
+#hsrehqrlif .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2862,7 +2184,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-right-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_col_heading {
+#hsrehqrlif .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2882,7 +2204,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   overflow-x: hidden;
 }
 
-#udlcclejoa .gt_column_spanner_outer {
+#hsrehqrlif .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2894,15 +2216,15 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   padding-right: 4px;
 }
 
-#udlcclejoa .gt_column_spanner_outer:first-child {
+#hsrehqrlif .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#udlcclejoa .gt_column_spanner_outer:last-child {
+#hsrehqrlif .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#udlcclejoa .gt_column_spanner {
+#hsrehqrlif .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2914,11 +2236,11 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   width: 100%;
 }
 
-#udlcclejoa .gt_spanner_row {
+#hsrehqrlif .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#udlcclejoa .gt_group_heading {
+#hsrehqrlif .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2944,7 +2266,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   text-align: left;
 }
 
-#udlcclejoa .gt_empty_group_heading {
+#hsrehqrlif .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2959,15 +2281,15 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   vertical-align: middle;
 }
 
-#udlcclejoa .gt_from_md > :first-child {
+#hsrehqrlif .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#udlcclejoa .gt_from_md > :last-child {
+#hsrehqrlif .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#udlcclejoa .gt_row {
+#hsrehqrlif .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2986,7 +2308,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   overflow-x: hidden;
 }
 
-#udlcclejoa .gt_stub {
+#hsrehqrlif .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2999,7 +2321,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   padding-right: 5px;
 }
 
-#udlcclejoa .gt_stub_row_group {
+#hsrehqrlif .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3013,15 +2335,15 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   vertical-align: top;
 }
 
-#udlcclejoa .gt_row_group_first td {
+#hsrehqrlif .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#udlcclejoa .gt_row_group_first th {
+#hsrehqrlif .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#udlcclejoa .gt_summary_row {
+#hsrehqrlif .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3031,16 +2353,16 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   padding-right: 5px;
 }
 
-#udlcclejoa .gt_first_summary_row {
+#hsrehqrlif .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_first_summary_row.thick {
+#hsrehqrlif .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#udlcclejoa .gt_last_summary_row {
+#hsrehqrlif .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3050,7 +2372,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-bottom-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_grand_summary_row {
+#hsrehqrlif .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3060,7 +2382,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   padding-right: 5px;
 }
 
-#udlcclejoa .gt_first_grand_summary_row {
+#hsrehqrlif .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3070,7 +2392,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-top-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_last_grand_summary_row_top {
+#hsrehqrlif .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3080,11 +2402,11 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-bottom-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_striped {
+#hsrehqrlif .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#udlcclejoa .gt_table_body {
+#hsrehqrlif .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3093,7 +2415,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-bottom-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_footnotes {
+#hsrehqrlif .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3107,7 +2429,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-right-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_footnote {
+#hsrehqrlif .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3116,7 +2438,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   padding-right: 5px;
 }
 
-#udlcclejoa .gt_sourcenotes {
+#hsrehqrlif .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3130,7 +2452,7 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   border-right-color: #D3D3D3;
 }
 
-#udlcclejoa .gt_sourcenote {
+#hsrehqrlif .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3138,72 +2460,72 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   padding-right: 5px;
 }
 
-#udlcclejoa .gt_left {
+#hsrehqrlif .gt_left {
   text-align: left;
 }
 
-#udlcclejoa .gt_center {
+#hsrehqrlif .gt_center {
   text-align: center;
 }
 
-#udlcclejoa .gt_right {
+#hsrehqrlif .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#udlcclejoa .gt_font_normal {
+#hsrehqrlif .gt_font_normal {
   font-weight: normal;
 }
 
-#udlcclejoa .gt_font_bold {
+#hsrehqrlif .gt_font_bold {
   font-weight: bold;
 }
 
-#udlcclejoa .gt_font_italic {
+#hsrehqrlif .gt_font_italic {
   font-style: italic;
 }
 
-#udlcclejoa .gt_super {
+#hsrehqrlif .gt_super {
   font-size: 65%;
 }
 
-#udlcclejoa .gt_footnote_marks {
+#hsrehqrlif .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#udlcclejoa .gt_asterisk {
+#hsrehqrlif .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#udlcclejoa .gt_indent_1 {
+#hsrehqrlif .gt_indent_1 {
   text-indent: 5px;
 }
 
-#udlcclejoa .gt_indent_2 {
+#hsrehqrlif .gt_indent_2 {
   text-indent: 10px;
 }
 
-#udlcclejoa .gt_indent_3 {
+#hsrehqrlif .gt_indent_3 {
   text-indent: 15px;
 }
 
-#udlcclejoa .gt_indent_4 {
+#hsrehqrlif .gt_indent_4 {
   text-indent: 20px;
 }
 
-#udlcclejoa .gt_indent_5 {
+#hsrehqrlif .gt_indent_5 {
   text-indent: 25px;
 }
 
-#udlcclejoa .katex-display {
+#hsrehqrlif .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#udlcclejoa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hsrehqrlif div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3600,81 +2922,29 @@ N = 1</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style
   
 </table>
 </div>
-</div>
-=======
-<div id="exploratory-findings" class="section level1">
-<h1>Exploratory Findings</h1>
-<div style="text-align: center;">
-<p><a href="table.1.html"> Click to view Table 1. Summary statistics
-including number of cases, percent of ticks with bacteria that causes
-Lyme disease, and average temperature over the course of three years.
-</a></p>
-</div>
-<p><br></p>
-<div class="float">
-<img src="boxplots_cases_year.png"
-alt="Figure 1: Box plots showing distribution of Lyme Disease cases in NYS across three years." />
-<div class="figcaption">Figure 1: Box plots showing distribution of Lyme
-Disease cases in NYS across three years.</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="cases_per_year.png"
-alt="Figure 2: Scatter plot of cases per year." />
-<div class="figcaption">Figure 2: Scatter plot of cases per year.</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="correlation.png"
-alt="Figure 3: Linear relationship between average annual temperature and number of Lyme Disease cases (r = -0.2407)." />
-<div class="figcaption">Figure 3: Linear relationship between average
-annual temperature and number of Lyme Disease cases (r = -0.2407).</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="heatmap.png"
-alt="Figure 4: Heat map demonstrating annual average temperature across NYS across all years in dataset (2019-2021)." />
-<div class="figcaption">Figure 4: Heat map demonstrating annual average
-temperature across NYS across all years in dataset (2019-2021).</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="histogram_cases.png"
-alt="Figure 5: Distribution of Lyme disease cases across all three years." />
-<div class="figcaption">Figure 5: Distribution of Lyme disease cases
-across all three years.</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="histogram_log_cases.png"
-alt="Figure 6: Distribution of the log transformation of Lyme disease cases across all three years." />
-<div class="figcaption">Figure 6: Distribution of the log transformation
-of Lyme disease cases across all three years.</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="temperature_distribution.png"
-alt="Figure 7: Distribution of average temperatures across all three years." />
-<div class="figcaption">Figure 7: Distribution of average temperatures
-across all three years.</div>
-</div>
-<p><br></p>
-<div class="float">
-<img src="tickwithbdistribution.png"
-alt="Figure 8: Distribution of percent ticks found to carry Lyme disease causing bacteria." />
-<div class="figcaption">Figure 8: Distribution of percent ticks found to
-carry Lyme disease causing bacteria.</div>
-</div>
-</div>
-<div id="model-findings" class="section level1">
-<h1>Model Findings</h1>
+<p>======= # Model Findings</p>
 <div style="text-align: center;">
 <p><a href="regress.html"> Click here to view Table 2. Regression output
 of the model assessing the relationship between percent of ticks with
 bacteria that causes Lyme disease in a given county and that county’s
 Lyme disease cases. </a></p>
 </div>
->>>>>>> 69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>69d70ab7fe3cc7cd6bb7adf9bb4e9851d82ed8ce</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</div>
 </div>
 
 

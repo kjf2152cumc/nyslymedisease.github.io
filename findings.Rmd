@@ -70,7 +70,9 @@ lyme_vs_avg_temp <- lm(lyme_count ~ jan_19 + feb_19 + mar_19 + apr_19 + may_19 +
 
 broom::tidy(lyme_vs_avg_temp) |> select(term, estimate, p.value) |>knitr::kable(digits =3)
 ```
-Considering that Lyme is generally less prevalent in cold temperature, it makes sense that there is a significantly negative number of lyme in below freezing temperatures. There is a large amount of variation of estimate between each month with not much of a pattern. 
+
+Considering that Lyme is generally less prevalent in cold temperature, it makes sense that there is a significantly negative number of lyme in below freezing temperatures. There is a large amount of variation of estimate between each month with not much of a pattern.
+
 =======
 ![Figure 3: Linear relationship between average annual temperature and number of Lyme Disease cases (r = -0.2407).](correlation.png)
 
