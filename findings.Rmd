@@ -1,6 +1,11 @@
 ---
-title: "Results of Exploratory Analysis"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
+
+# Exploratory Findings
 
 <div style="text-align: center;">
   <a href="table.1.html">
@@ -48,7 +53,7 @@ title: "Results of Exploratory Analysis"
 ![Figure 8: Distribution of percent ticks found to carry Lyme disease causing bacteria.](tickwithbdistribution.png)
 
 
-# Results of Regression Analysis
+# Model Findings
 
 <div style="text-align: center;">
   <a href="regress.html">
