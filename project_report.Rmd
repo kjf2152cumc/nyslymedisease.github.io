@@ -87,17 +87,56 @@ The datasets for 2019, 2020, and 2021 were combined using `bind_rows()`. This fi
 
 The final combined dataset, containing integrated Lyme disease, tick surveillance, and temperature data, was exported as a CSV file (`combined_data_kf.csv`) for use in analysis. It contained `138` rows and `27` columns. 
 
-The coding associated with this work is available [here](sarahy_dataclean.html). 
+The code associated with this work is available [here](sarahy_dataclean.html). 
 
 # Visual & Exploratory Analyses
-##Visualizations, 
+
+The dataset was imported from `combined_data_kf.csv`. Minor corrections were applied to fix spelling errors in county names (`Cattaragus` was corrected to `Cattaraugus`, and `St Lawrance` to `St. Lawrance`) using the `mutate()` and `case_when()` functions from the `dplyr` package.
+
+##Visualizations
 ##summaries, and 
 ##exploratory statistical analyses. 
 
+#### 7. **Summary Statistics**
+Descriptive statistics for each county were calculated using `tbl_summary()` and `group_by()` with summary functions. Variables included:
+- `lyme_count`
+- `avg_temp`
+- `b_burgdorferi_percent`
+
+Two summary tables were created:
+- A detailed `tbl_summary` table with summary statistics for all counties, saved as an HTML file (`Results/table.1.html`).
+- A `gt` table summarizing years with data, mean Lyme cases, mean temperature, and mean `b_burgdorferi_percent`, saved as `Results/table.1.html`.
+
+#### 5. **Trend Analysis**
+The total Lyme disease cases per year were summarized using `group_by()` and `summarize()`. A line plot (`geom_point()` and `geom_smooth()`) was created to visualize trends in total cases, saved as `cases_per_year.png`.
+
 Justify the steps you took, and show any major changes to your ideas.
 
-#Additional analysis: 
-If you undertake formal statistical analyses, describe these in detail
+# Regression Analysis 
+
+## Visualizing Assumptions
+
+We assessed the distributions of variables we sought to include in our model. 
+
+- **Lyme Disease Cases**:
+  The distribution of `lyme_count` was visualized using `ggplot2` with a histogram (`geom_histogram()`), showing density and right-skewed data.
+- **Boxplot by Year**:
+  A boxplot of `lyme_count` by `year` was created, adding a red dot to represent the mean value using `stat_summary()`.
+- **Log Transformation**:
+  To normalize the skewed distribution of `lyme_count`, a log10 transformation was applied, and a histogram of the transformed values (`log_cases`) was created.
+
+- **Temperature**
+A histogram of average temperature (`avg_temp`) was created using `geom_histogram()`, confirming a normal distribution. 
+- **Tick Surveillance**
+The prevalence of Lyme disease bacteria in ticks (`b_burgdorferi_percent`) was visualized with a histogram and overlaid density plot (`geom_density()`). The plot confirmed a normal distribution.
+
+All plots were saved as PNG files using `ggsave()` with filenames (`histogram_cases.png`, `boxplots_cases_year.png`, `histogram_log_cases.png`, `temperature_distribution.png`, `tickwithbdistribution.png`) in the `Results` directory.
+
+
+## The Model
+A linear regression model (`lm()`) was fitted to examine the association between `log_cases` and `b_burgdorferi_percent`, controlling for `avg_temp`. Results were summarized in a table using the `gtsummary` package (`tbl_regression()`) and exported as an HTML file (`Results/regress.html`).
+
+The code associated with regression modeling can be viewed [here](regression_coding.html). 
 
 #Discussion: 
 What were your findings? Are they what you expect? What insights into the data can you make?

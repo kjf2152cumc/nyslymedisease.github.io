@@ -13,7 +13,7 @@
 
 <title>Project Report</title>
 
-<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -487,20 +487,93 @@ metrics.</p>
 surveillance, and temperature data, was exported as a CSV file
 (<code>combined_data_kf.csv</code>) for use in analysis. It contained
 <code>138</code> rows and <code>27</code> columns.</p>
-<p>The coding associated with this work is available <a
+<p>The code associated with this work is available <a
 href="sarahy_dataclean.html">here</a>.</p>
 </div>
 </div>
 <div id="visual-exploratory-analyses" class="section level1">
 <h1>Visual &amp; Exploratory Analyses</h1>
-<p>##Visualizations, ##summaries, and ##exploratory statistical
+<p>The dataset was imported from <code>combined_data_kf.csv</code>.
+Minor corrections were applied to fix spelling errors in county names
+(<code>Cattaragus</code> was corrected to <code>Cattaraugus</code>, and
+<code>St Lawrance</code> to <code>St. Lawrance</code>) using the
+<code>mutate()</code> and <code>case_when()</code> functions from the
+<code>dplyr</code> package.</p>
+<p>##Visualizations ##summaries, and ##exploratory statistical
 analyses.</p>
+<div id="summary-statistics" class="section level4">
+<h4>7. <strong>Summary Statistics</strong></h4>
+<p>Descriptive statistics for each county were calculated using
+<code>tbl_summary()</code> and <code>group_by()</code> with summary
+functions. Variables included: - <code>lyme_count</code> -
+<code>avg_temp</code> - <code>b_burgdorferi_percent</code></p>
+<p>Two summary tables were created: - A detailed
+<code>tbl_summary</code> table with summary statistics for all counties,
+saved as an HTML file (<code>Results/table.1.html</code>). - A
+<code>gt</code> table summarizing years with data, mean Lyme cases, mean
+temperature, and mean <code>b_burgdorferi_percent</code>, saved as
+<code>Results/table.1.html</code>.</p>
+</div>
+<div id="trend-analysis" class="section level4">
+<h4>5. <strong>Trend Analysis</strong></h4>
+<p>The total Lyme disease cases per year were summarized using
+<code>group_by()</code> and <code>summarize()</code>. A line plot
+(<code>geom_point()</code> and <code>geom_smooth()</code>) was created
+to visualize trends in total cases, saved as
+<code>cases_per_year.png</code>.</p>
 <p>Justify the steps you took, and show any major changes to your
 ideas.</p>
-<p>#Additional analysis: If you undertake formal statistical analyses,
-describe these in detail</p>
+</div>
+</div>
+<div id="regression-analysis" class="section level1">
+<h1>Regression Analysis</h1>
+<div id="visualizing-assumptions" class="section level2">
+<h2>Visualizing Assumptions</h2>
+<p>We assessed the distributions of variables we sought to include in
+our model.</p>
+<ul>
+<li><p><strong>Lyme Disease Cases</strong>: The distribution of
+<code>lyme_count</code> was visualized using <code>ggplot2</code> with a
+histogram (<code>geom_histogram()</code>), showing density and
+right-skewed data.</p></li>
+<li><p><strong>Boxplot by Year</strong>: A boxplot of
+<code>lyme_count</code> by <code>year</code> was created, adding a red
+dot to represent the mean value using
+<code>stat_summary()</code>.</p></li>
+<li><p><strong>Log Transformation</strong>: To normalize the skewed
+distribution of <code>lyme_count</code>, a log10 transformation was
+applied, and a histogram of the transformed values
+(<code>log_cases</code>) was created.</p></li>
+<li><p><strong>Temperature</strong> A histogram of average temperature
+(<code>avg_temp</code>) was created using <code>geom_histogram()</code>,
+confirming a normal distribution.</p></li>
+<li><p><strong>Tick Surveillance</strong> The prevalence of Lyme disease
+bacteria in ticks (<code>b_burgdorferi_percent</code>) was visualized
+with a histogram and overlaid density plot
+(<code>geom_density()</code>). The plot confirmed a normal
+distribution.</p></li>
+</ul>
+<p>All plots were saved as PNG files using <code>ggsave()</code> with
+filenames (<code>histogram_cases.png</code>,
+<code>boxplots_cases_year.png</code>,
+<code>histogram_log_cases.png</code>,
+<code>temperature_distribution.png</code>,
+<code>tickwithbdistribution.png</code>) in the <code>Results</code>
+directory.</p>
+</div>
+<div id="the-model" class="section level2">
+<h2>The Model</h2>
+<p>A linear regression model (<code>lm()</code>) was fitted to examine
+the association between <code>log_cases</code> and
+<code>b_burgdorferi_percent</code>, controlling for
+<code>avg_temp</code>. Results were summarized in a table using the
+<code>gtsummary</code> package (<code>tbl_regression()</code>) and
+exported as an HTML file (<code>Results/regress.html</code>).</p>
+<p>The code associated with regression modeling can be viewed <a
+href="regression_coding.html">here</a>.</p>
 <p>#Discussion: What were your findings? Are they what you expect? What
 insights into the data can you make?</p>
+</div>
 </div>
 
 
