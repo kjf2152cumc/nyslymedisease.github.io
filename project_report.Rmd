@@ -126,7 +126,7 @@ The total Lyme disease cases per year were summarized using `group_by()` and `su
    - Correlation between `avg_temp` and `avg_lyme_rate` was calculated using `cor()` and visualized with a scatterplot. A linear regression line was overlaid using `geom_smooth()`.
 
 ## EDA Outputs
-- **Interactive Maps**: Interactive maps were generated for each year using the `generate_map()` function and saved as interactive objects for web embedding. View them [here](). 
+- **Interactive Maps**: Interactive maps were generated for each year using the `generate_map()` function and saved as interactive objects for web embedding. View them [here](file:///Users/kalebfrierson/Desktop/MPH/Year%202/Fall%20Semester%202024/Data%20Science%20I%20/Final/website/nyslymedisease_project_website/dashboard.html). The code for dashboard development is [here](dashboard.rmd). 
 - **Heat Maps**: We generated a heat map of average temperatures by county were created for 2022 using `geom_sf()` with color scales (`scale_fill_viridis_c()`).
 - **Correlation Analysis**: Scatterplots and correlation coefficients were used to explore the relationship between temperature and Lyme rates. 
 
@@ -155,9 +155,14 @@ All plots were saved as PNG files using `ggsave()` with filenames (`histogram_ca
 
 
 ## The Model
+
 A linear regression model (`lm()`) was fitted to examine the association between `log_cases` and `b_burgdorferi_percent`, controlling for `avg_temp`. Results were summarized in a table using the `gtsummary` package (`tbl_regression()`) and exported as an HTML file (`Results/regress.html`).
 
 The code associated with regression modeling can be viewed [here](regression_coding.html). 
 
-#Discussion: 
-What were your findings? Are they what you expect? What insights into the data can you make?
+#Discussion
+
+Our analysis revealed that the statistical distribution of Lyme disease cases remained consistent across the three years of interest (2019–2021). This suggests a relatively stable burden of disease over time, despite year-to-year variations in environmental and population factors. Through geographic visualization, we observed that areas in the southern part of New York State, including New York City and Long Island, showed higher incidence rates of Lyme disease. While the correlation analysis indicated a slight decrease in Lyme cases as average annual temperature increased, this relationship may be confounded by population density. Warmer areas, such as the southern counties, are also the most densely populated, which could explain the observed trend.
+
+A clear and expected relationship emerged between the percentage of ticks carrying the Lyme disease-causing bacterium (Borrelia burgdorferi) and the incidence of Lyme disease cases in each county. This aligns with existing literature and reinforces the importance of tick surveillance programs in understanding and predicting Lyme disease risks. 
+

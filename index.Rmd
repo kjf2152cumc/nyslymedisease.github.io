@@ -23,4 +23,6 @@ embed the video
 
 # Development
 
-You can view the Github repository hosting this website and associated source coding [here](https://github.com/kjf2152cumc/nyslymedisease.github.io). 
+The Github repository hosting this website and associated source coding can be found [here](https://github.com/kjf2152cumc/nyslymedisease.github.io). 
+
+The Github repository in which all formal data manipulation, analysis, and visualization occurred can be viewed [here](https://github.com/mnw2132/p8105_final). 

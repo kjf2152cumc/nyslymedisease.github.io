@@ -10,7 +10,7 @@ output:
 library(flexdashboard)
 ```
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Distribution of NYS Lyme Diseaes cases in 2019
@@ -18,7 +18,7 @@ Column {data-width=650}
 HTML('<iframe src="lyme_map_2019.html" width="100%" height="600px" style="border:none;"></iframe>')
 
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Distribution of NYS Lyme Diseaes cases in 2020

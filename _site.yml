@@ -12,9 +12,9 @@ navbar:
     - text: "About the Authors"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<kjf2152@columbia.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: http://github.com/kjf2152cumc/
 output:
   html_document: 
     theme: journal
