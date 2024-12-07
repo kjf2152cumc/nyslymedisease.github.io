@@ -17,7 +17,6 @@ Kaleb is a second year MPH student in the Department of Epidemiology. His certif
 
 
 [Tanmayi A. Amanchi](taa2158@columbia.edu) 
-
 Tanmayi is a second year MPH student in the Department of Epidemiology, with a certificate in the Applied Biostatistics and Data Science. Her contributions to this project included:
 
 - Research question development and project planning
