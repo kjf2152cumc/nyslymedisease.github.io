@@ -4,14 +4,18 @@ title: "Authorship and Contributions"
 
 [Kaleb J. Frierson](kjf2152@columbia.edu)
 
-Kaleb is a second year MPH student in the Department of Epidemiology. His certificate is in Applied Biostatistics and Data Science. His conrtibutions to this project included:
+Kaleb is a second year MPH student in the Department of Epidemiology. His certificate is in Applied Biostatistics and Data Science. His contributions to this project included:
 
 - Research question development and planning
 - Collaborative brainstorming of data sources, cleaning procedures, exclusion criteria, and analyses given available data. 
 - Development of the project website and primary authorship of the [project report](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
 
 [Mary N. Williams](mnw2132@columbia.edu)
+Mary is a second year MPH student in the Department of Epidemiology. Her certificate is in Infectious Disease Epidimiology. Her contributions to this project included:
 
+- Background research for question and development of question
+- Collaboration on data sources, cleaning procedures, exclusion and inclusion criteria. 
+- Created data analysis and described findings from the analysis for the [project report](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
 
 [Sarahy J. Martinez](sjm2284@columbia.edu)
 
