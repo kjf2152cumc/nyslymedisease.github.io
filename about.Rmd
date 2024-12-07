@@ -15,7 +15,7 @@ Mary is a second year MPH student in the Department of Epidemiology. Her certifi
 
 - Background research for question and development of question
 - Collaboration on data sources, cleaning procedures, exclusion and inclusion criteria. 
-- Created data analysis and described findings from the analysis for the [project report](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
+- Created data analysis and described findings from the analysis for the [Results](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
 
 [Sarahy J. Martinez](sjm2284@columbia.edu)
 
