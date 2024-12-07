@@ -2,4 +2,18 @@
 title: "Authorship and Contributions"
 ---
 
-Here we can describe ourselves and our contribution to the work. Maybe we could include headshots or something to make it fun. 
+[Kaleb J. Frierson](kjf2152@columbia.edu)
+
+Kaleb is a second year MPH student in the Department of Epidemiology. His certificate is in Applied Biostatistics and Data Science. His conrtibutions to this project included:
+
+- Research question development and planning
+- Collaborative brainstorming of data sources, cleaning procedures, exclusion criteria, and analyses given available data. 
+- Development of the project website and primary authorship of the [project report](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
+
+[Mary N. Williams](mnw2132@columbia.edu)
+
+
+[Sarahy J. Martinez](sjm2284@columbia.edu)
+
+
+[Tanmayi A. Amanchi](taa2158@columbia.edu) 
