@@ -371,19 +371,19 @@ div.tocify {
 <h2>Motivation &amp; Related Work</h2>
 <p>Our project focuses on analyzing the relationship between Lyme
 disease case prevalence, tick populations, and environmental factors in
-New York State. Lyme disease is a vector borne disease with long term
-side effects that contribute to a meaningful amount of morbidity. We are
-interested in regional variations in Lyme disease and how environmental
-factors influence the spread of the disease. Many members of our team
-came to Columbia to study infectious disease epidemiology and are
-interested in using skills from P8105 in future research.</p>
+New York State (NYS). Lyme disease is a vector borne disease with long
+term side effects that contribute to a meaningful amount of morbidity.
+We are interested in regional variations in Lyme disease and how
+environmental factors influence the spread of the disease. Many members
+of our team came to Columbia to study infectious disease epidemiology
+and are interested in using skills from P8105 in future research.</p>
 </div>
 <div id="questions-we-wanted-to-answer" class="section level2">
 <h2>Questions We Wanted to Answer</h2>
 <p>We sought to:</p>
 <ol style="list-style-type: decimal">
-<li><p>Characterize the distribution of Lyme disease cases across New
-York State counties.</p></li>
+<li><p>Characterize the distribution of Lyme disease cases across NYS
+counties.</p></li>
 <li><p>Explore any correlation between tick population density and Lyme
 disease incidence.</p></li>
 <li><p>Understand if and how environmental factors, such as temperature
@@ -392,16 +392,115 @@ and precipitation, predict tick disease rates.</p></li>
 </div>
 <div id="questions-we-did-answer" class="section level2">
 <h2>Questions We Did Answer</h2>
-<p>#Data: Source, scraping method, cleaning, etc.</p>
-<p>#Exploratory analysis: ##Visualizations, ##summaries, and
-##exploratory statistical analyses.</p>
+<ol style="list-style-type: decimal">
+<li><p>Through summary statistics and mapping we characterized the
+distribution of Lyme disease cases across counties in NYS between 2019
+and 2021.</p></li>
+<li><p>Using a heat map we charted average temperature in NYS counties
+to visually assess whether case density and temperature appear
+related.</p></li>
+<li><p>Using a linear model we explored the relationship between the
+percentage of collected ticks that carry the bacteria which causes Lyme
+disease and the cases of Lyme disease. We also included average yearly
+temperature per county.</p></li>
+</ol>
+</div>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<div id="sources" class="section level2">
+<h2>Sources</h2>
+<p>To explore our interests we required:</p>
+<ol style="list-style-type: decimal">
+<li><p>County level data on tick prevalence and percentage of those
+ticks carrying the bacteria that causes Lyme disease. We obtained this
+data from the NYS Department of health (DOH) <a
+href="https://health.data.ny.gov/Health/Deer-Tick-Surveillance-Nymphs-May-to-Sept-excludin/kibp-u2ip/data">here</a>.</p></li>
+<li><p>County level data on incident cases of Lyme disease. We also got
+this from the NYS DOH <a
+href="https://health.data.ny.gov/Health/Community-Health-Lyme-Disease-Incidence-Rate-per-1/6sxr-cqij">here</a>.</p></li>
+<li><p>County level climate data for New York which we obtained <a
+href="https://data.pnj.com/weather-data/new-york/36/1976-03-01/">here</a>.</p></li>
+<li><p>Geospatial shape data for graphing which we obtained from <a
+href="https://www.esri.com/en-us/home">ESRI</a>.</p></li>
+</ol>
+</div>
+<div id="data-import-initial-tidying" class="section level2">
+<h2>Data Import &amp; Initial Tidying</h2>
+<p>We employed the <code>tidyverse</code>, <code>rvest</code>,
+<code>sf</code>, <code>purrr</code>, <code>readxl</code>,
+<code>dplyr</code>, and <code>janitor</code> packages for data
+wrangling, cleaning, and spatial analysis.</p>
+<p>The Lyme disease dataset was loaded from a CSV file
+(<code>new_york_county_lyme.csv</code>). The data were cleaned to
+standardize column names using the <code>janitor::clean_names()</code>
+function. Relevant variables (<code>county_name</code>,
+<code>event_count</code>, <code>percent_rate</code>) were selected,
+renamed, and a new column, <code>data</code>, was added to verify
+merging accuracy: - <code>NAME</code>: County name. -
+<code>lyme_count</code>: Number of reported Lyme disease events. -
+<code>lyme_rate</code>: Percentage rate of Lyme disease.</p>
+<p>Tick surveillance data were imported from
+<code>Deer_Tick_Surveillance__Adults__Oct_to_Dec__excluding_Powassan_virus__Beginning_2008_20241116.csv</code>.
+After standardizing column names, we filtered data for the years
+2019–2021 to align with the Lyme disease data. Columns unrelated to
+analysis were removed, and new variables were created: -
+<code>NAME</code>: Renamed from <code>county</code> to enable merging. -
+<code>ticks_tested</code>: Total ticks tested in each county. -
+<code>data</code>: Added to distinguish during merging.</p>
+<p>A shapefile of New York counties (<code>Counties.shp</code>) was
+imported using the <code>sf</code> package to facilitate spatial
+analysis. The shapefile retained its spatial attributes, enabling
+integration with non-spatial datasets.</p>
+</div>
+<div id="merging-datasets" class="section level2">
+<h2>Merging Datasets</h2>
+<p>The tick surveillance and Lyme disease datasets were merged using the
+<code>full_join()</code> function, aligning by <code>NAME</code>. The
+resulting dataset was then joined with the county shapefile using
+<code>left_join()</code> to incorporate spatial information.</p>
+<p>Temperature data were imported from <code>avg_temp_county.csv</code>.
+Data cleaning involved: - Standardizing column names. - Selecting
+temperature-related variables (monthly data). - Removing rows with
+missing data. - Renaming <code>county</code> to <code>name</code> for
+consistency. - Removing the “County” suffix from county names to enable
+merging.</p>
+<p>The cleaned temperature data were merged with the previously combined
+dataset.</p>
+</div>
+<div id="adding-variables-average-temperature" class="section level2">
+<h2>Adding Variables: Average Temperature</h2>
+<p>Monthly temperatures for each county were averaged for the years
+2019, 2020, and 2021 using <code>rowMeans()</code>: - Variables
+<code>jan_19</code> to <code>dec_19</code>, <code>jan_20</code> to
+<code>dec_20</code>, and <code>jan_21</code> to <code>dec_21</code> were
+used to calculate yearly averages. - Unnecessary monthly columns were
+dropped after computing averages.</p>
+</div>
+<div id="final-analytic-dataset" class="section level2">
+<h2>Final Analytic Dataset</h2>
+<p>The datasets for 2019, 2020, and 2021 were combined using
+<code>bind_rows()</code>. This final dataset included: - Yearly average
+temperature for each county. - Lyme disease rates. - Tick surveillance
+metrics.</p>
+<p>The final combined dataset, containing integrated Lyme disease, tick
+surveillance, and temperature data, was exported as a CSV file
+(<code>combined_data_kf.csv</code>) for use in analysis. It contained
+<code>138</code> rows and <code>27</code> columns.</p>
+<p>The coding associated with this work is available <a
+href="sarahy_dataclean.html">here</a>.</p>
+</div>
+</div>
+<div id="visual-exploratory-analyses" class="section level1">
+<h1>Visual &amp; Exploratory Analyses</h1>
+<p>##Visualizations, ##summaries, and ##exploratory statistical
+analyses.</p>
 <p>Justify the steps you took, and show any major changes to your
 ideas.</p>
 <p>#Additional analysis: If you undertake formal statistical analyses,
 describe these in detail</p>
 <p>#Discussion: What were your findings? Are they what you expect? What
 insights into the data can you make?</p>
-</div>
 </div>
 
 

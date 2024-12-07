@@ -7,14 +7,13 @@ title: "Project Report"
 
 ## Motivation & Related Work
 
-Our project focuses on analyzing the relationship between Lyme disease case prevalence, tick populations, and environmental factors in New York State. Lyme disease is a vector borne disease with long term side effects that contribute to a meaningful amount of morbidity. We are interested in  regional variations in Lyme disease and how environmental factors influence the spread of the disease. Many members of our team came to Columbia to study infectious disease epidemiology and are interested in using skills from P8105 in future research. 
-
+Our project focuses on analyzing the relationship between Lyme disease case prevalence, tick populations, and environmental factors in New York State (NYS). Lyme disease is a vector borne disease with long term side effects that contribute to a meaningful amount of morbidity. We are interested in  regional variations in Lyme disease and how environmental factors influence the spread of the disease. Many members of our team came to Columbia to study infectious disease epidemiology and are interested in using skills from P8105 in future research. 
 
 ## Questions We Wanted to Answer 
 
 We sought to:
 
-1. Characterize the distribution of Lyme disease cases across New York State counties.
+1. Characterize the distribution of Lyme disease cases across NYS counties.
 
 2. Explore any correlation between tick population density and Lyme disease incidence.
 
@@ -22,12 +21,75 @@ We sought to:
 
 ## Questions We Did Answer
 
+1. Through summary statistics and mapping we characterized the distribution of Lyme disease cases across counties in NYS between 2019 and 2021. 
+
+2. Using a heat map we charted average temperature in NYS counties to visually assess whether case density and temperature appear related. 
+
+3. Using a linear model we explored the relationship between the percentage of collected ticks that carry the bacteria which causes Lyme disease and the cases of Lyme disease. We also included average yearly temperature per county. 
 
 
-#Data: Source, scraping method, cleaning, etc.
+# Data
+
+## Sources
+
+To explore our interests we required:
+
+1. County level data on tick prevalence and percentage of those ticks carrying the bacteria that causes Lyme disease. We obtained this data from the NYS Department of health (DOH) [here](https://health.data.ny.gov/Health/Deer-Tick-Surveillance-Nymphs-May-to-Sept-excludin/kibp-u2ip/data). 
+
+2. County level data on incident cases of Lyme disease. We also got this from the NYS DOH [here](https://health.data.ny.gov/Health/Community-Health-Lyme-Disease-Incidence-Rate-per-1/6sxr-cqij).  
+
+3. County level climate data for New York which we obtained [here](https://data.pnj.com/weather-data/new-york/36/1976-03-01/). 
+
+4. Geospatial shape data for graphing which we obtained from [ESRI](https://www.esri.com/en-us/home). 
 
 
-#Exploratory analysis: 
+## Data Import & Initial Tidying
+
+We employed the `tidyverse`, `rvest`, `sf`, `purrr`, `readxl`, `dplyr`, and `janitor` packages for data wrangling, cleaning, and spatial analysis.
+
+The Lyme disease dataset was loaded from a CSV file (`new_york_county_lyme.csv`). The data were cleaned to standardize column names using the `janitor::clean_names()` function. Relevant variables (`county_name`, `event_count`, `percent_rate`) were selected, renamed, and a new column, `data`, was added to verify merging accuracy:
+- `NAME`: County name.
+- `lyme_count`: Number of reported Lyme disease events.
+- `lyme_rate`: Percentage rate of Lyme disease.
+
+Tick surveillance data were imported from `Deer_Tick_Surveillance__Adults__Oct_to_Dec__excluding_Powassan_virus__Beginning_2008_20241116.csv`. After standardizing column names, we filtered data for the years 2019–2021 to align with the Lyme disease data. Columns unrelated to analysis were removed, and new variables were created:
+- `NAME`: Renamed from `county` to enable merging.
+- `ticks_tested`: Total ticks tested in each county.
+- `data`: Added to distinguish during merging.
+
+A shapefile of New York counties (`Counties.shp`) was imported using the `sf` package to facilitate spatial analysis. The shapefile retained its spatial attributes, enabling integration with non-spatial datasets.
+
+## Merging Datasets
+
+The tick surveillance and Lyme disease datasets were merged using the `full_join()` function, aligning by `NAME`. The resulting dataset was then joined with the county shapefile using `left_join()` to incorporate spatial information.
+
+Temperature data were imported from `avg_temp_county.csv`. Data cleaning involved:
+- Standardizing column names.
+- Selecting temperature-related variables (monthly data).
+- Removing rows with missing data.
+- Renaming `county` to `name` for consistency.
+- Removing the "County" suffix from county names to enable merging.
+
+The cleaned temperature data were merged with the previously combined dataset.
+
+## Adding Variables: Average Temperature
+
+Monthly temperatures for each county were averaged for the years 2019, 2020, and 2021 using `rowMeans()`:
+- Variables `jan_19` to `dec_19`, `jan_20` to `dec_20`, and `jan_21` to `dec_21` were used to calculate yearly averages.
+- Unnecessary monthly columns were dropped after computing averages.
+
+## Final Analytic Dataset
+
+The datasets for 2019, 2020, and 2021 were combined using `bind_rows()`. This final dataset included:
+- Yearly average temperature for each county.
+- Lyme disease rates.
+- Tick surveillance metrics.
+
+The final combined dataset, containing integrated Lyme disease, tick surveillance, and temperature data, was exported as a CSV file (`combined_data_kf.csv`) for use in analysis. It contained `138` rows and `27` columns. 
+
+The coding associated with this work is available [here](sarahy_dataclean.html). 
+
+# Visual & Exploratory Analyses
 ##Visualizations, 
 ##summaries, and 
 ##exploratory statistical analyses. 
