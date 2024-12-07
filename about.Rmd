@@ -4,7 +4,7 @@ title: "Authorship and Contributions"
 
 <br>
 
-[Kaleb J. Frierson](kjf2152@columbia.edu)
+[Kaleb J. Frierson](https://kjf2152cumc.github.io/kfrierson.github.io/)
 
 Kaleb is a second year MPH student in the Department of Epidemiology. His certificate is in Applied Biostatistics and Public Health Data Science. His contributions to this project included:
 
@@ -13,7 +13,7 @@ Kaleb is a second year MPH student in the Department of Epidemiology. His certif
 - Development of the project website and primary authorship of the [project report](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
 - Using Tanmayi's maps to create the [Interactive Dashboard](https://kjf2152cumc.github.io/nyslymedisease.github.io/dashboard.html). 
 
-[Mary N. Williams](mnw2132@columbia.edu)
+[Mary N. Williams](https://www.linkedin.com/in/mary-williams106?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
 
 Mary is a second year MPH student in the Department of Epidemiology. Her certificate is in Infectious Disease Epidimiology. Her contributions to this project included:
 
@@ -21,7 +21,7 @@ Mary is a second year MPH student in the Department of Epidemiology. Her certifi
 - Collaboration on data sources, cleaning procedures, exclusion and inclusion criteria. 
 - Created data analysis and described findings from the analysis for the [Results](https://kjf2152cumc.github.io/nyslymedisease.github.io/project_report.html). 
 
-[Sarahy J. Martinez](sjm2284@columbia.edu)
+[Sarahy J. Martinez](https://www.linkedin.com/in/sarahy-martinez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
 
 Sarahy is a second year MPH student in the Department of Epidemiology. Her certificate is in Applied Biostatistics and Public Health Data Science. Her contributions to this project included: 
 
@@ -30,7 +30,7 @@ Sarahy is a second year MPH student in the Department of Epidemiology. Her certi
 - Assisted with developing the research topic and questions. 
 - Brainstormed kinds of linear models and maps to create during analysis and visualization phase. 
 
-[Tanmayi A. Amanchi](taa2158@columbia.edu) 
+[Tanmayi A. Amanchi](https://www.linkedin.com/in/tanmayi-amanchi-7895371b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app) 
 
 Tanmayi is a second year MPH student in the Department of Epidemiology, with a certificate in the Applied Biostatistics and Data Science. Her contributions to this project included:
 
