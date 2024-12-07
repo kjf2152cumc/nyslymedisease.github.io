@@ -13,14 +13,14 @@ Column {data-width=500}
 ### Lyme Disease Cases by County, 2019
 
 ```{r, generate_map_2019, cache=TRUE}
-generate_map(2019)
+
 ```
 
 
 ### Lyme Disease Cases by County, 2020
 
 ```{r, generate_map_2020, cache=TRUE}
-generate_map(2020)
+
 ```
 
 Column {data-width=500}
@@ -28,11 +28,11 @@ Column {data-width=500}
 ### Lyme Disease Cases by County, 2021
 
 ```{r, generate_map_2021, cache=TRUE}
-generate_map(2021)
+
 ```
 
 ### Lyme Disease Cases by County, 2022
 
 ```{r, generate_map_2022, cache=TRUE}
-generate_map(2022)
+
 ```
